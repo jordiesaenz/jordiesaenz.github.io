@@ -10,7 +10,7 @@ gem 'tzinfo-data', platforms: [:mswin, :mingw, :jruby]
 
 # Middleman Gems
 gem "middleman", "~> 4.0.0"
-gem "middleman-blog"
+gem "middleman-blog", github: 'middleman/middleman-blog', branch: 'master'
 gem "middleman-cli", "~> 4.0.0"
 gem 'middleman-deploy', github: 'middleman-contrib/middleman-deploy', branch: 'master'
 
