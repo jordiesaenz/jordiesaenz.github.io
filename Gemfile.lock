@@ -1,3 +1,13 @@
+GIT
+  remote: git://github.com/middleman-contrib/middleman-deploy.git
+  revision: 243ab38b08896cd5a37d6845a01a5761b934a898
+  branch: master
+  specs:
+    middleman-deploy (2.0.0.pre.alpha)
+      middleman-core (>= 3.2)
+      net-sftp
+      ptools
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -74,10 +84,6 @@ GEM
       sass (>= 3.4)
       tilt (~> 1.4.1)
       uglifier (~> 2.6)
-    middleman-deploy (1.0.0)
-      middleman-core (>= 3.2)
-      net-sftp
-      ptools
     mime-types (3.0)
       mime-types-data (~> 3.2015)
     mime-types-data (3.2015.1120)
@@ -123,7 +129,7 @@ DEPENDENCIES
   middleman (~> 4.0.0)
   middleman-blog
   middleman-cli (~> 4.0.0)
-  middleman-deploy (~> 1.0)
+  middleman-deploy!
   redcarpet (~> 3.3, >= 3.3.3)
   tzinfo-data
   wdm (~> 0.1.0)
