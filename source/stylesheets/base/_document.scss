@@ -15,8 +15,9 @@ body {
   }
 }
 .color-overlay {
-  @include position(fixed, 0 0 0 0);
   background: $white-80;
+  overflow: hidden;
+  @include position(fixed, 0 0 0 0);
 }
 .body-wrap {
   @include position(absolute, 0 0 120px 0);
@@ -42,9 +43,8 @@ body {
     }
   }
   &.active {
-    overflow-x: hidden;
-    overflow-y: scroll;
-    @include transform(translateX(240px));
+    overflow: hidden;
+    margin-left: 240px;
   }
   &.toggle {
     padding-bottom: 240px;

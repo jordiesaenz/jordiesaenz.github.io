@@ -1703,12 +1703,13 @@ body {
   color: #fff; }
 
 .color-overlay {
+  background: rgba(255, 255, 255, 0.8);
+  overflow: hidden;
   position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
-  left: 0;
-  background: rgba(255, 255, 255, 0.8); }
+  left: 0; }
 
 .body-wrap {
   position: absolute;
@@ -1739,13 +1740,8 @@ body {
       color: #000;
       text-shadow: -3px 0 0 #18FFFF, 0 -3px 0 #E040FB, 3px 0 0 #FF4081, 0 3px 0 #FFFF00; }
   .content-wrap-outer.active {
-    overflow-x: hidden;
-    overflow-y: scroll;
-    -webkit-transform: translateX(240px);
-    -moz-transform: translateX(240px);
-    -ms-transform: translateX(240px);
-    -o-transform: translateX(240px);
-    transform: translateX(240px); }
+    overflow: hidden;
+    margin-left: 240px; }
   .content-wrap-outer.toggle {
     padding-bottom: 240px; }
   .content-wrap-outer .content-wrap-inner {
@@ -1968,6 +1964,10 @@ section.about p {
       top: 50%;
       right: 0;
       left: 0; }
+      @media (max-width: 479px) {
+        .blog-card-link .blog-card .poster-image {
+          -webkit-filter: saturate(100%);
+          filter: saturate(100%); } }
   .blog-card-link:hover, .blog-card-link:focus, .blog-card-link:active {
     color: #FF4081; }
     .blog-card-link:hover .blog-card, .blog-card-link:focus .blog-card, .blog-card-link:active .blog-card {

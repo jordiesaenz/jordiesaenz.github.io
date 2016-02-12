@@ -79,6 +79,7 @@
       @extend %transition;
       @include filter(saturate(0%));
       @include position(relative, 50% 0 null 0);
+      @media (max-width: $xs-max) {@include filter(saturate(100%));}
     }
   }
   &:hover, &:focus, &:active {
