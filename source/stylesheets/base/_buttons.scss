@@ -1,0 +1,39 @@
+@mixin btn-styles($color, $background-color, $hover-color, $hover-background-color) {
+  color: $color;
+  background-color: $background-color;
+  &:hover,
+  &:focus,
+  &:active {
+    outline: none;
+    color: $hover-color;
+    background-color: $hover-background-color;
+  }
+}
+%btn-block-styles {
+  display: block;
+  width: 100%;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+.btn {
+  display: inline-block;
+  min-height: 60px;
+  margin: 0;
+  padding: 15px 15px 20px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  @extend %transition;
+  @include border-radius(0);
+  &-optin {
+    @include btn-styles($yellow, $pink, $purple, $cyan);
+    &:hover {
+      letter-spacing: 3px;
+    }
+  }
+  &.btn-block {
+    @extend %btn-block-styles;
+  }
+}

@@ -1,0 +1,95 @@
+.blog-post {
+  @extend %page-margin;
+  &:not(:first-of-type) {
+    border-top: 1px solid $black-50;
+  }
+  .post-title {
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+  }
+  .post-body {
+    font-size: 24px;
+    margin: 0;
+    padding: 15px 0;
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    p {
+      text-indent: 15px;
+      &:not(:first-of-type) {
+        padding-top: 10px;
+      }
+    }
+  }
+}
+.blog-listing {
+  margin-bottom: 45px;
+}
+.blog-card-link {
+  color: $black;
+  text-decoration: none;
+  .blog-card {
+    background-color: $white-50;
+    box-sizing: border-box;
+    margin-top: 30px;
+    padding: 15px;
+    @extend %page-margin;
+    @extend %transition;
+    @include position(relative);
+    @include shadow(1);
+    .date {
+      font-size: 16px;
+      font-weight: 300;
+      letter-spacing: 5px;
+      @include position(absolute, 50% null null -65px);
+      @include transform(translateY(-50%) rotate(-90deg));
+      @media (max-width: $xs-max) {
+        color: $white;
+        font-size: 16px;
+        font-weight: 300;
+        letter-spacing: -1px;
+        z-index: 999999;
+        @include position(absolute, 15px null null 45px);
+        @include transform(translateX(-50%) rotate(0deg));
+
+      }
+    }
+    .post-title {
+      font-size: 24px;
+      font-weight: 700;
+      margin: 0;
+      padding: 0 0 7.5px;
+      @media (max-width: $xs-max) { padding: 5px 0; }
+    }
+    .post-body {
+      font-size: 18px;
+      margin: 0;
+      padding: 0;
+    }
+    .read-more {
+      color: $purple;
+      font-size: 16px;
+      font-weight: 500;
+    }
+    .poster-image {
+      width: 100%;
+      @extend %transition;
+      @include filter(saturate(0%));
+      @include position(relative, 50% 0 null 0);
+    }
+  }
+  &:hover, &:focus, &:active {
+    color: $pink;
+    .blog-card {
+      background-color: $white-80;
+      @include shadow(2);
+      @include transform(translateY(-5px));
+    }
+    .poster-image {
+      @include filter(saturate(100%));
+    }
+  }
+}

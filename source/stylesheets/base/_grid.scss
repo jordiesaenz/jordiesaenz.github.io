@@ -1,0 +1,127 @@
+// Breakpoints
+$xs-max: 479px;
+$sm-min: $xs-max + 1;
+$sm-max: 767px;
+$md-min: $sm-max + 1;
+$md-max: 991px;
+$lg-min: $md-max + 1;
+$lg-max: 1499px;
+$xl-min: $lg-max + 1;
+
+// Grid System
+$container-gutter: 15px;
+$container-gutter-mobile: 15px;
+$container-gutter-md: 15px;
+$grid-gutter: 15px;
+
+.container {
+  max-width: $xl-min - ($container-gutter * 2);
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: $container-gutter;
+  padding-left: $container-gutter;
+  @include position(relative);
+  &--fluid {
+    width: 100%;
+    max-width: 100%;
+  }
+  &-content {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    @include transition(margin-top .3s, margin-bottom .3s);
+    @media (max-width: $md-max) {
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+  }
+}
+.container:before,
+.container:after {
+  @extend .clearfix;
+}
+@media (max-width: $md-max) {
+  .container {
+    padding-right: $container-gutter-md;
+    padding-left: $container-gutter-md;
+  }
+}
+@media (max-width: $sm-max) {
+  .container {
+    padding-right: $container-gutter-mobile;
+    padding-left: $container-gutter-mobile;
+  }
+}
+
+.grid {
+  font-size: 0;
+  margin-right: -$grid-gutter / 2;
+  margin-left: -$grid-gutter / 2;
+  > [class*="col"] {
+    display: inline-block;
+    zoom: 1;
+    min-height: 1px;
+    vertical-align: top;
+    padding-right: $grid-gutter / 2;
+    padding-left: $grid-gutter / 2;
+    @include position(relative);
+  }
+  &--flush {
+    margin-right: 0;
+    margin-left: 0;
+    > [class*="col"] {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+}
+.grid:before,
+.grid:after {
+  @extend .clearfix;
+}
+
+[class*="col"] {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+$sizes: (
+  sm: $sm-min,
+  md: $md-min,
+  lg: $lg-min,
+  xl: $xl-min
+);
+
+$tag: "" "-offset" "-push" "-pull";
+$prop: "width" "margin-left" "left" "right";
+
+@mixin col-sizer($res) {
+  @for $i from 1 through length($prop) {
+    .col-#{$res}#{nth($tag, $i)}-full { #{nth($prop, $i)}: 100%; }
+    .col-#{$res}#{nth($tag, $i)}-9-10 { #{nth($prop, $i)}: 90%; }
+    .col-#{$res}#{nth($tag, $i)}-7-8  { #{nth($prop, $i)}: 87.5%; }
+    .col-#{$res}#{nth($tag, $i)}-5-6  { #{nth($prop, $i)}: 83.3333333%; }
+    .col-#{$res}#{nth($tag, $i)}-4-5  { #{nth($prop, $i)}: 80%; }
+    .col-#{$res}#{nth($tag, $i)}-3-4  { #{nth($prop, $i)}: 75%; }
+    .col-#{$res}#{nth($tag, $i)}-7-10 { #{nth($prop, $i)}: 70%; }
+    .col-#{$res}#{nth($tag, $i)}-2-3  { #{nth($prop, $i)}: 66.6666666%; }
+    .col-#{$res}#{nth($tag, $i)}-5-8  { #{nth($prop, $i)}: 62.5%; }
+    .col-#{$res}#{nth($tag, $i)}-3-5  { #{nth($prop, $i)}: 60%; }
+    .col-#{$res}#{nth($tag, $i)}-1-2  { #{nth($prop, $i)}: 50%; }
+    .col-#{$res}#{nth($tag, $i)}-2-5  { #{nth($prop, $i)}: 40%; }
+    .col-#{$res}#{nth($tag, $i)}-3-8  { #{nth($prop, $i)}: 37.5%; }
+    .col-#{$res}#{nth($tag, $i)}-1-3  { #{nth($prop, $i)}: 33.3333333%; }
+    .col-#{$res}#{nth($tag, $i)}-3-10 { #{nth($prop, $i)}: 30%; }
+    .col-#{$res}#{nth($tag, $i)}-1-4  { #{nth($prop, $i)}: 25%; }
+    .col-#{$res}#{nth($tag, $i)}-1-5  { #{nth($prop, $i)}: 20%; }
+    .col-#{$res}#{nth($tag, $i)}-1-6  { #{nth($prop, $i)}: 16.6666667%; }
+    .col-#{$res}#{nth($tag, $i)}-1-8  { #{nth($prop, $i)}: 12.5%; }
+    .col-#{$res}#{nth($tag, $i)}-1-10 { #{nth($prop, $i)}: 10%; }
+  }
+}
+
+@include col-sizer(xs);
+@each $break, $size in $sizes {
+  @media (min-width: #{$size}) {
+    @include col-sizer($break);
+  }
+}

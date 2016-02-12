@@ -1,0 +1,11 @@
+@mixin rainbow-text-shadow($amount) {
+  text-shadow: (-$amount) 0 0 $cyan, 0 (-$amount) 0 $purple, ($amount) 0 0 $pink, 0 ($amount) 0 $yellow;
+}
+@mixin shadow($number) {
+  @if $number == 1 {
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+  }
+  @if $number == 2 {
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1), 0 4px 4px rgba(0, 0, 0, 0.2);
+  }
+}

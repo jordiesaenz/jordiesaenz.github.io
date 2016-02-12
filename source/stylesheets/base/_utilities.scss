@@ -1,0 +1,28 @@
+// Clearfix
+.clearfix {
+  display: table;
+  content: " ";
+  clear: both;
+}
+
+// Floats
+.pull-left  { float: left; }
+.pull-right { float: right; }
+
+// Text
+.text-left { text-align: left !important; }
+.text-center { text-align: center !important; }
+.text-right { text-align: right !important; }
+.text-justify { text-align: justify !important; }
+.text-lowercase { text-transform: lowercase; }
+.text-uppercase { text-transform: uppercase; }
+.text-capitalize { text-transform: capitalize; }
+
+// Visibility
+.show { display: block !important; }
+.hidden { display: none !important; }
+@media (max-width: $xs-max) { .hidden-xs { display: none !important; }}
+@media (min-width: $sm-min) and (max-width: $sm-max) { .hidden-sm { display: none !important; }}
+@media (min-width: $md-min) and (max-width: $md-max) { .hidden-md { display: none !important; }}
+@media (min-width: $lg-min) and (max-width: $lg-max) { .hidden-lg { display: none !important; }}
+@media (min-width: $xl-min) { .hidden-xl { display: none !important; }}

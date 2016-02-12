@@ -1,0 +1,86 @@
+#footer-toggle {
+  color: $purple;
+  display: block;
+  font-size: 16px;
+  text-decoration: none;
+  @extend %transition;
+  @include position(fixed, null 15px 15px null);
+  &:hover {
+    color: darken($purple, 25%);
+    letter-spacing: .25px;
+  }
+}
+footer {
+  background: $black;
+  height: 0;
+  opacity: 0;
+  padding: 15px;
+  position: fixed;
+  @extend %transition;
+  @include position(fixed, null 0 -100% 0);
+  &.active {
+    overflow: hidden;
+    @include transform(translateX(240px));
+  }
+  &.toggle {
+    display: block;
+    height: auto;
+    opacity: 1;
+    visibility: visible;
+    @include position(fixed, null null 0 null);
+  }
+  #footer-close {
+    color: $black-80;
+    z-index: 9999999;
+    @include position(absolute, -40px 15px null null);
+    @include transition(all .2s ease-in-out);
+    &:hover {
+      color: $black;
+      cursor: pointer;
+      @include rainbow-text-shadow(3px);
+    }
+  }
+  .optin-headline {
+    color: $white;
+    font-size: 24px;
+    h2 {margin: 0;}
+    @media (max-width: $sm-max) { padding-bottom: 15px; }
+  }
+  #mc_embed_signup {
+    font-size: 18px;
+    margin: auto;
+    position: relative;
+    text-align: center;
+    @include position(relative);
+    div.mce_inline_error {
+      background-color: transparent;
+      color: $pink;
+      font-size: 15px;
+      text-align: center;
+      width: 100%;
+      z-index: 1;
+      @include position(absolute, 0 null null 50%);
+      @include transform(translateX(-50%));
+    }
+    label { display: none; }
+  }
+  input[type="email"] {
+    background-color: $white;
+    border: none;
+    box-sizing: border-box;
+    display: block;
+    height: 60px;
+    padding: 0 20px;
+    width: 100%;
+    & + label {
+      display:none;
+      visibility: hidden;
+    }
+  }
+  * {
+    @include selection(true) {
+      background: $cyan;
+      color: $black;
+    }
+  }
+}

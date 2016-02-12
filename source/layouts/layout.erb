@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+
+    <!-- Typekit -->
+    <script src="https://use.typekit.net/aod8hgl.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title><%= current_page.data.title || "Jordie Saenz" %></title>
+
+    <%= stylesheet_link_tag :styles %>
+  </head>
+
+  <body class="<%= page_classes %>">
+    <div class="color-overlay"></div>
+    <div class="sidebar">
+      <a href="/"><img class="logo" src="https://7585772d0354c57373d83229aa6ed9446615d684.googledrive.com/host/0B2iaOCot7-OHMmFmcjVzSGp3dzQ/jslogo.png"></a>
+      <ul class="navigation">
+        <li><a href="/">home</a></li>
+        <li><a href="/blog">blog</a></li>
+        <li><a href="/connect">connect</a></li>
+      </ul>
+    </div>
+    <div class="content-wrap-outer">
+      <i class="menu-icon fa-3x fa fa-bars"></i>
+      <div class="content-wrap-inner">
+        <%= yield %>
+      </div>
+    </div>
+    <a id="footer-toggle" href="#">click here to join a secret club</a>
+    <footer>
+      <i id="footer-close" class="fa fa-3x fa-times"></i>
+      <div class="container">
+        <div class="grid">
+          <div class="col-md-1-2 optin-headline">
+            <h2>SIGN UP FOR THE COOLEST NEWSLETTER EVER</h2>
+          </div>
+          <div class="col-md-1-2">
+            <div id="mc_embed_signup">
+              <form action="//jordiesaenz.us9.list-manage.com/subscribe/post?u=0eee09b1552779feada46aa0a&amp;id=e1685cb220" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                <div id="mc_embed_signup_scroll">
+                  <div class="mc-field-group">
+                  	<label for="mce-EMAIL">Email Address </label>
+                  	<input placeholder="email" type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+                  </div>
+                	<div id="mce-responses" class="clear">
+                		<div class="response" id="mce-error-response" style="display:none"></div>
+                		<div class="response" id="mce-success-response" style="display:none"></div>
+                	</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                  <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_0eee09b1552779feada46aa0a_e1685cb220" tabindex="-1" value=""></div>
+                  <input class="btn btn-block btn-optin button" type="submit" value="subscribe" name="subscribe" id="mc-embedded-subscribe"></div>
+                </div>
+              </form>
+            </div>
+            <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <%= javascript_include_tag 'jquery', 'menu' %>
+  </body>
+</html>
