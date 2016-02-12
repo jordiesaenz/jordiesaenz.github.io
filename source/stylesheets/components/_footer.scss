@@ -72,8 +72,9 @@ footer {
     height: 60px;
     padding: 0 20px;
     width: 100%;
+    @include border-radius(0);
     & + label {
-      display:none;
+      display: none;
       visibility: hidden;
     }
   }
