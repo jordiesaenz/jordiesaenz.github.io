@@ -17,7 +17,8 @@ body {
 .color-overlay {
   background: $white-80;
   overflow: hidden;
-  @include position(fixed, 0 0 0 0);
+  width: 300%;
+  @include position(fixed, -100% -100% -100% -100%);
 }
 .body-wrap {
   @include position(absolute, 0 0 120px 0);
