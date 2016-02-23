@@ -3,9 +3,10 @@ html, body {
 }
 body {
   @include background-image(url(../../images/background.jpg));
-  background-size: fill;
+  background-attachment: fixed;
   background-position: top center;
   background-repeat: no-repeat;
+  background-size: cover;
   font-size: 62.5%;
 }
 * {

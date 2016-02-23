@@ -11,4 +11,77 @@ section.about {
     padding: 0;
     margin: 0;
   }
+  ul {
+    @extend .grid;
+    display: block;
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+    li {
+      list-style: none;
+      @extend .col-sm-1-3;
+      display: inline-block;
+      margin: 0;
+      padding: 0;
+    }
+  }
+  a {
+    color: $black;
+    background-color: transparent;
+    font-weight: 600;
+    padding: 2.5px 5px;
+    @extend %transition;
+    text-decoration: none;
+    border: 3px solid transparent;
+    background-color: transparent;
+    &:hover, &:active, &:focus, &.active { background-color : $black-80 ;}
+  }
+  a#developer {
+    &:hover, &:active, &:focus, &.active {
+      color: $purple;
+      border-color: $purple;
+    }
+  }
+  a#designer {
+    &:hover, &:active, &:focus, &.active {
+      color: $pink;
+      border-color: $pink;
+    }
+  }
+  a#musician {
+    &:hover, &:active, &:focus, &.active {
+      color: $yellow;
+      border-color: $yellow;
+    }
+  }
+  a#writer {
+    &:hover, &:active, &:focus, &.active {
+      color: $cyan;
+      border-color: $cyan;
+    }
+  }
+  .info-box {
+    @extend .text-left;
+    @include transition(transform .4s ease, opacity .4s ease, height .4s ease, width .4s ease, box-shadow .4s ease, background-color .4s ease);
+    &.hide {
+      background-color: $white-50;
+      height: 0;
+      margin: 0;
+      opacity: 0;
+      padding: 0;
+      visibility: hidden;
+      width: 0;
+      @include shadow(1);}
+      @include transform(translateY(15px));
+    &.active {
+      background-color: $white-80;
+      display: block;
+      margin-top: 30px;
+      opacity: 1;
+      padding: 30px;
+      @include position(relative, 0 null null 0);
+      @include shadow(2);
+      @include transform(translateY(0));
+    }
+  }
 }

@@ -1,29 +1,60 @@
 .blog-post {
+  background: $white-80;
+  padding: 30px;
+  margin: 30px auto;
+  max-width: 800px;
+  text-align: justify;
   @extend %page-margin;
+  @include shadow(1);
   &:not(:first-of-type) {
     border-top: 1px solid $black-50;
   }
   .post-title {
-    font-size: 32px;
+    font-size: 48px;
     font-weight: 700;
     margin: 0;
     padding: 0;
+    @extend .text-center;
+  }
+  .poster-image-container {
+    margin: 15px 0;
+    width: 100%;
+  }
+  .poster-image {
+    height: auto;
+    width: 100%;
+    max-width: 400px;
+    @include position(relative, null null null 50%);
+    @include transform(translateX(-50%));
+    @include shadow(2);
   }
   .post-body {
     font-size: 24px;
+    font-weight: 300;
+    line-height: 1.6;
     margin: 0;
     padding: 15px 0;
+    @extend .text-justify;
     * {
       margin: 0;
       padding: 0;
     }
+    a {
+      color: $pink;
+      @extend %transition;
+      &:hover, &:focus, &:active { color: $purple }
+    }
     p {
-      text-indent: 15px;
       &:not(:first-of-type) {
         padding-top: 10px;
       }
     }
+    ol {
+      font-size: 20px;
+      margin: 15px 45px;
+    }
   }
+  @media (max-width: $xs-max) { margin: 0; }
 }
 .blog-listing {
   margin-bottom: 45px;
@@ -47,7 +78,7 @@
       @include position(absolute, 50% null null -65px);
       @include transform(translateY(-50%) rotate(-90deg));
       @media (max-width: $xs-max) {
-        color: $white;
+        color: $black;
         font-size: 16px;
         font-weight: 300;
         letter-spacing: -1px;
