@@ -13,8 +13,19 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
-    <!-- Use title if it's in the page YAML frontmatter -->
+    <!-- SEO Tags -->
     <title><%= current_page.data.title || "Jordie Saenz" %></title>
+    <meta property="og:title" content="<%= current_page.data.title || "Jordie Saenz" %>" />
+    <meta name="twitter:card" content="<%= current_page.data.title %>" />
+    <meta name="twitter:site" content="@jordiesaenz" />
+    <meta name="twitter:creator" content="@jordiesaenz" />
+    <meta property="og:url" content="<%= current_page.url %>" />
+    <meta property="og:site_name" content="Jordie Saenz" />
+
+    <% if current_page.data.blog_post = true %>
+      <meta property="og:description" content="<%= current_page.data.summary || "Jordie's personal website." %>" />
+      <meta property="og:image" content="<%= current_page.data.image_full %>" />
+    <% end %>
 
     <%= stylesheet_link_tag :styles %>
   </head>

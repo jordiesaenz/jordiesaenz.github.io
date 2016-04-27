@@ -1,5 +1,6 @@
 ---
 title: Why I Started A Blog
+blog_post: true
 date: 2016/02/22
 tags: sass, css
 summary: This is my very first blog post. Basically, I'm going to give you the run-down on my I'm deciding to finally start a blog. It's taken forever for me to actually do it, and we're going to go over what motivated me to do it once and for all.

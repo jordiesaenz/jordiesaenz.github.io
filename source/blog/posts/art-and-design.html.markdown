@@ -1,5 +1,6 @@
 ---
 title: Art and Design
+blog_post: true
 date: 2016/04/26
 tags: art, design
 summary: Let me walk you through my thoughtjourneys about design and art and stuff, and how I overcame my fear of design.
