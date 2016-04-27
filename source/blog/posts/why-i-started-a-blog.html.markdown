@@ -3,7 +3,8 @@ title: Why I Started A Blog
 date: 2016/02/22
 tags: sass, css
 summary: This is my very first blog post. Basically, I'm going to give you the run-down on my I'm deciding to finally start a blog. It's taken forever for me to actually do it, and we're going to go over what motivated me to do it once and for all.
-image: https://7585772d0354c57373d83229aa6ed9446615d684.googledrive.com/host/0B2iaOCot7-OHMmFmcjVzSGp3dzQ/blog-image-1.png
+image_sq: https://7585772d0354c57373d83229aa6ed9446615d684.googledrive.com/host/0B2iaOCot7-OHMmFmcjVzSGp3dzQ/blog-post-1-sq.png
+image_full: https://7585772d0354c57373d83229aa6ed9446615d684.googledrive.com/host/0B2iaOCot7-OHMmFmcjVzSGp3dzQ/blog-post-1-full.png
 ---
 
 <p>This is new for me, I don't really do this sort of thing. I've never been the kind to keep a journal. I mean, I've written things, but it's always been poetry, or songs, or something of the sort. But I'm the kid who never even took notes in class.</p>

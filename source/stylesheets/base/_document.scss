@@ -2,11 +2,6 @@ html, body {
   font-family: "Museo Sans", sans-serif;
 }
 body {
-  @include background-image(url(../../images/background.jpg));
-  background-attachment: fixed;
-  background-position: top center;
-  background-repeat: no-repeat;
-  background-size: cover;
   font-size: 62.5%;
 }
 * {
@@ -16,7 +11,7 @@ body {
   }
 }
 .color-overlay {
-  background: $white-80;
+  background: #fafafa;
   overflow: hidden;
   width: 300%;
   @include position(fixed, -100% -100% -100% -100%);

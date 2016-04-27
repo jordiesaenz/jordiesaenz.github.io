@@ -1689,12 +1689,6 @@ html, body {
   font-family: "Museo Sans", sans-serif; }
 
 body {
-  background-image: url(../../images/background.jpg);
-  background-image: url(../../images/background.jpg);
-  background-attachment: fixed;
-  background-position: top center;
-  background-repeat: no-repeat;
-  background-size: cover;
   font-size: 62.5%; }
 
 *::-moz-selection {
@@ -1705,7 +1699,7 @@ body {
   color: #fff; }
 
 .color-overlay {
-  background: rgba(255, 255, 255, 0.8);
+  background: #fafafa;
   overflow: hidden;
   width: 300%;
   position: fixed;
@@ -1992,7 +1986,7 @@ section.about .info-box {
       .blog-post .post-body a:hover, .blog-post .post-body a:focus, .blog-post .post-body a:active {
         color: #E040FB; }
     .blog-post .post-body p:not(:first-of-type) {
-      padding-top: 10px; }
+      padding-top: 20px; }
     .blog-post .post-body ol {
       font-size: 20px;
       margin: 15px 45px; }
