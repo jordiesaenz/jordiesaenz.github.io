@@ -6,6 +6,7 @@ tags: code, css, frontend, sass
 summary: Stop writing so much CSS. Stop repeating yourself. Start using Sass.
 image_sq: https://7585772d0354c57373d83229aa6ed9446615d684.googledrive.com/host/0B2iaOCot7-OHMmFmcjVzSGp3dzQ/blog-post-3-sq.png
 image_full: https://7585772d0354c57373d83229aa6ed9446615d684.googledrive.com/host/0B2iaOCot7-OHMmFmcjVzSGp3dzQ/blog-post-3-full.png
+image_twitter: https://7585772d0354c57373d83229aa6ed9446615d684.googledrive.com/host/0B2iaOCot7-OHMmFmcjVzSGp3dzQ/blog-post-3-twitter.png
 ---
 
 <p class="text-center"><em>Disclaimer: This blog post is about coding. It's also about life.</em></p>
