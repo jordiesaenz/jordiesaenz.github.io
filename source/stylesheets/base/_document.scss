@@ -75,3 +75,13 @@ body {
     letter-spacing: 5px;
   }
 }
+pre.codeblock {
+  background-color: #002b36;
+  color: #93a1a1;
+  padding: 0px;
+  @include border-radius(3px);
+  .blue { color: #268bd2 }
+  .red { color: #dc322f }
+  .yellow { color: #859900 }
+  .cyan { color: #2aa198 }
+}

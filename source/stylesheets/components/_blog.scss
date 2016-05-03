@@ -3,7 +3,7 @@
   padding: 30px;
   margin: 30px auto;
   max-width: 800px;
-  text-align: justify;
+  text-align: left;
   @extend %page-margin;
   @include shadow(1);
   &:not(:first-of-type) {
@@ -34,7 +34,6 @@
     line-height: 1.6;
     margin: 0;
     padding: 15px 0;
-    @extend .text-justify;
     * {
       margin: 0;
       padding: 0;
@@ -53,6 +52,10 @@
       font-size: 20px;
       margin: 15px 45px;
     }
+  }
+  pre.codeblock {
+    padding: 15px;
+    margin: 15px 0;
   }
   @media (max-width: $xs-max) { margin: 0; }
 }
