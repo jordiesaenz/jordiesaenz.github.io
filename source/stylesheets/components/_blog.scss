@@ -1,11 +1,5 @@
 .blog-post {
-  background: $white-80;
-  padding: 30px;
-  margin: 30px auto;
-  max-width: 800px;
-  text-align: left;
-  @extend %page-margin;
-  @include shadow(1);
+  @extend .panel;
   &:not(:first-of-type) {
     border-top: 1px solid $black-50;
   }

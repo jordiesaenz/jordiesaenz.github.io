@@ -15,6 +15,13 @@ body {
   overflow: hidden;
   width: 300%;
   @include position(fixed, -100% -100% -100% -100%);
+  &-modal {
+    display: none;
+    z-index: 100;
+    background: $black-80;
+    @extend %transition;
+    &.display { display: block; }
+  }
 }
 .body-wrap {
   @include position(absolute, 0 0 120px 0);
@@ -48,6 +55,7 @@ body {
   }
   .content-wrap-inner {
     width: 100%;
+    max-width: 1200px;
     @include position(relative, null null null 50%);
     @include transform(translateX(-50%));
   }
@@ -84,4 +92,93 @@ pre.codeblock {
   .red { color: #dc322f }
   .yellow { color: #859900 }
   .cyan { color: #2aa198 }
+}
+.panel {
+  background: $white-80;
+  padding: 30px;
+  margin: 30px auto;
+  max-width: 800px;
+  text-align: left;
+  @extend %page-margin;
+  @include shadow(1);
+}
+
+hr {
+  margin: 40px 0;
+}
+
+a {
+  color: $pink;
+  @extend %transition;
+  word-break: break-word;
+  word-wrap: break-word;
+  &:hover, &:focus, &:active { color: $purple }
+}
+
+
+.img-responsive {
+  width: 100%;
+  height: auto;
+}
+
+.project {
+  margin-top: 40px;
+  p {
+    text-align: center;
+    width: calc(80% - 15px);
+    margin: auto;
+    font-size: 0;
+    padding: 0;
+    color: rgba(255, 255, 255, 0);
+    background-color: rgba(0, 0, 0, 0);
+    @include position(absolute, 50% null null 50%);
+    @include transform(translateY(-50%) translateX(-50%));
+    @extend %transition;
+  }
+  &:hover {
+    cursor: pointer;
+    p {
+      font-size: 18px;
+      padding: 20px 0;
+      color: $white;
+      background-color: $black-50;
+    }
+  }
+  &-modal {
+    opacity: 0;
+    height: 0;
+    display: none;
+    z-index: 200;
+    width: calc(100% - 15px);
+    max-width: 960px;
+    background-color: $white;
+    @extend .panel;
+    @include position(fixed, 50% null null 50%);
+    @include transform(translateX(-50%) translateY(-50%));
+    @extend %transition;
+    h2 {
+      font-size: 32px;
+      font-weight: 700;
+      margin: 0;
+    }
+    p {
+      font-size: 18px;
+      padding: 0 20px;
+    }
+    &.display {
+      height: auto;
+      display: block;
+      opacity: 1;
+    }
+    @media (max-width: $sm-max) {
+      width: calc(100% - 120px);
+      overflow: scroll;
+      @include position(fixed, 15px 15px 15px 15px);
+      @include transform(translateX(0) translateY(0));
+      h2 { margin-top: 15px; }
+    }
+  }
+  @media (max-width: $xs-max) {
+    width: 100%;
+  }
 }
