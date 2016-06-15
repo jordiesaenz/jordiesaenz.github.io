@@ -1,9 +1,5 @@
 <% wrap_layout :layout do %>
   <div class="blog-post">
-    <h1 class="post-title"><%= current_article.title %></h1>
-    <div class="poster-image-container">
-      <img class="poster-image" src="<%= current_article.data.image_full %>">
-    </div>
     <div class="post-body">
       <%= current_article.body %>
     </div>

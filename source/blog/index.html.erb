@@ -1,12 +1,13 @@
 ---
 
 title: Jordie Saenz | Blog
+id: blog
+header: "Blog."
+tagline: "This is where I write stuff."
+page_name: Blog
 pageable: true
 
 ---
-
-<h1 class="page-title"><a href="/blog">BLOG</a></h1>
-
 <div class="blog-listing">
   <% blog.articles[0...10].each do |article| %>
     <a class="blog-card-link" href="<%= article.url %>">
@@ -17,7 +18,7 @@ pageable: true
             <img class="poster-image" src="<%= article.data.image_sq %>">
           </div>
           <div class="col-xl-5-6 col-md-3-4 col-sm-2-3">
-            <h2 class="post-title"><%= article.title %></h2>
+            <h3 class="post-title"><%= article.title %></h3>
             <div class="post-body">
               <%= article.data.summary %>
             </div>

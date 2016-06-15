@@ -1,5 +1,6 @@
 ---
 title: Why I Started A Blog
+id: blog_post
 blog_post: true
 date: 2016/02/22
 tags: sass, css

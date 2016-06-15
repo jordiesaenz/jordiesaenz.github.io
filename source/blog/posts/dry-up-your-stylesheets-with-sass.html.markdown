@@ -1,5 +1,6 @@
 ---
 title: DRY Up Your Stylesheets with Sass
+id: blog_post
 blog_post: true
 date: 2016/05/02
 tags: code, css, frontend, sass

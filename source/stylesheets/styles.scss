@@ -6,12 +6,14 @@
 @import "base/variables";
 @import "base/extends";
 @import "base/mixins";
+@import "base/typography";
 @import "base/document";
 @import "base/buttons";
 
-@import "components/sidebar";
+@import "components/menu";
+@import "components/header";
 @import "components/about";
 @import "components/blog";
-@import "components/connect";
 @import "components/footer";
+@import "components/parallax";
 @import "components/emo";

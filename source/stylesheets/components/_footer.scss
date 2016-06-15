@@ -1,87 +1,92 @@
-#footer-toggle {
-  color: $purple;
-  display: block;
-  font-size: 16px;
-  text-decoration: none;
-  @extend %transition;
-  @include position(fixed, null 15px 15px null);
-  &:hover {
-    color: darken($purple, 25%);
-    letter-spacing: .25px;
-  }
-}
 footer {
-  background: $black;
-  height: 0;
-  opacity: 0;
-  padding: 15px;
-  position: fixed;
+  padding-top: 60px;
+  padding-bottom: 15px;
+  position: relative;
   @extend %transition;
-  @include position(fixed, null 0 -100% 0);
-  &.active {
-    overflow: hidden;
-    @include transform(translateX(240px));
-  }
-  &.toggle {
-    display: block;
-    height: auto;
-    opacity: 1;
-    visibility: visible;
-    @include position(fixed, null null 0 null);
-  }
-  #footer-close {
-    color: $black-80;
-    z-index: 9999999;
-    @include position(absolute, -40px 15px null null);
-    @include transition(all .2s ease-in-out);
-    &:hover {
+  .social {
+    float: left;
+    @include position(absolute, null null 0 null);
+    a {
       color: $black;
-      cursor: pointer;
-      @include rainbow-text-shadow(3px);
+      margin-right: 7.5px;
+      text-decoration: none;
+      &:hover, &:active, &:focus {
+        color: $blue;
+      }
+    }
+    @media (max-width: $sm-max) {
+      display: block;
+      float: none;
+      margin: auto;
+      text-align: center;
+      position: relative;
+      .fa { font-size: 2rem; }
     }
   }
-  .optin-headline {
-    color: $white;
-    font-size: 24px;
-    h2 {margin: 0;}
-    @media (max-width: $sm-max) { padding-bottom: 15px; }
+  .mc-field-group {
+    height: 45px;
   }
   #mc_embed_signup {
-    font-size: 18px;
+    float: right;
+    display: inline-block;
+    height: 45px;
     margin: auto;
     position: relative;
     text-align: center;
     @include position(relative);
     div.mce_inline_error {
       background-color: transparent;
-      color: $pink;
-      font-size: 15px;
+      color: $red;
       text-align: center;
-      width: 100%;
       z-index: 1;
       @include position(absolute, 0 null null 50%);
       @include transform(translateX(-50%));
     }
     label { display: none; }
+    p {
+      font-family: $sans-serif;
+      display: inline;
+      font-size: 1.2rem;
+      @include position(absolute, -20px null null 0);
+      @include transform(translateX(6px));
+      @media (max-width: $sm-max) {
+        display: block;
+        float: none;
+        margin: auto;
+        text-align: center;
+        position: relative;
+        top: 0;
+      }
+    }
+    @media (max-width: $sm-max) {
+      height: auto;
+      display: block;
+      float: none;
+      margin: auto;
+      margin-top: 7.5px;
+    }
   }
   input[type="email"] {
     background-color: $white;
-    border: none;
+    border: 3px solid $black;
     box-sizing: border-box;
-    display: block;
-    height: 60px;
-    padding: 0 20px;
-    width: 100%;
+    display: inline-block;
+    height: 100%;
+    padding: 0 60px 0 15px;
     @include border-radius(0);
+    @include transform(translateX(6px));
+    &:hover, &:active, &:focus {
+      outline: none;
+    }
     & + label {
       display: none;
       visibility: hidden;
     }
   }
-  * {
-    @include selection(true) {
-      background: $cyan;
-      color: $black;
-    }
+  .btn {
+    height: 100%;
+    vertical-align: middle;
+    padding: 0 15px;
+    @include btn-styles($white, $black, $white, $blue);
   }
 }

@@ -1,17 +1,6 @@
 %transition {
   @include transition(all .2s ease-in-out);
 }
-%page-margin {
-  margin: 0 100px;
-  padding: 30px 0 15px;
-  @include calc(width, calc(100% - 200px));
-  @include transition(all .2s ease-in-out);
-  @media (max-width: $sm-max) {
-    margin: 0 30px;
-    @include calc(width, calc(100% - 60px));
-  }
-  @media (max-width: $xs-max) {
-    margin: 0 15px;
-    @include calc(width, calc(100% - 30px));
-  }
+%margin-top {
+  margin-top: 15px;
 }

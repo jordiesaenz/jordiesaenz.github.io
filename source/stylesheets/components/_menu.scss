@@ -1,0 +1,26 @@
+nav.menu {
+  display: block;
+  margin: auto;
+  text-align: center;
+  transform: translateX(-50%);
+  width: 100%;
+  z-index: 999;
+  @include position(absolute, 0 null null 50%);
+  a {
+    text-decoration: none;
+    border-bottom: 3px solid transparent;
+    color: $black;
+    font-weight: 500;
+    @include margin(0 7.5px);
+    @include padding(0 7.5px);
+    @extend %transition;
+    &.active {
+      color: $red;
+      border-color: $red;
+    }
+    &:hover, &:focus, &:active {
+      color: $blue;
+      border-color: $blue;
+    }
+  }
+}

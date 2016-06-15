@@ -1,20 +1,19 @@
 html, body {
-  font-family: "Museo Sans", sans-serif;
+  height: 100%;
+  width: 100%;
 }
-body {
-  font-size: 62.5%;
-}
+
 * {
   @include selection(true) {
-    background: $black;
+    background: $yellow;
     color: $white;
   }
 }
 .color-overlay {
-  background: #fafafa;
   overflow: hidden;
   width: 300%;
   @include position(fixed, -100% -100% -100% -100%);
+  z-index: -1;
   &-modal {
     display: none;
     z-index: 100;
@@ -23,96 +22,21 @@ body {
     &.display { display: block; }
   }
 }
-.body-wrap {
-  @include position(absolute, 0 0 120px 0);
-  width: 100%;
+
+section {
+  margin: 30px 0;
 }
-.content-wrap-outer {
-  @include position(absolute, 0 0 null 0);
-  @extend %transition;
-  .menu-icon {
-    @include position(absolute, 15px null null 15px);
-    color: $black-80;
-    z-index: 9999999;
-    @extend %transition;
-    @media (max-width: $xs-max) {
-      font-size: 24px;
-      top: 7.5px;
-      left: 7.5px;
-    }
-    &:hover {
-      cursor: pointer;
-      color: $black;
-      @include rainbow-text-shadow(3px);
-    }
-  }
-  &.active {
-    overflow: hidden;
-    margin-left: 240px;
-  }
-  &.toggle {
-    padding-bottom: 240px;
-  }
-  .content-wrap-inner {
-    width: 100%;
-    max-width: 1200px;
-    @include position(relative, null null null 50%);
-    @include transform(translateX(-50%));
-  }
-}
-.page-title {
-  padding: 15px 30px 0;
-  letter-spacing: 15px;
-  text-align: center;
-  font-weight: 900;
-  font-size: 10em;
-  margin: 0;
-  text-transform: uppercase;
-  @extend %transition;
-  @include rainbow-text-shadow(4px);
-  a {
-    color: $black;
-    text-decoration: none;
-  }
-  @media (max-width: $sm-max) {
-    font-size: 8em;
-    letter-spacing: 8px;
-  }
-  @media (max-width: $xs-max) {
-    font-size: 4.75em;
-    letter-spacing: 5px;
-  }
-}
-pre.codeblock {
-  background-color: #002b36;
-  color: #93a1a1;
-  padding: 0px;
-  @include border-radius(3px);
-  .blue { color: #268bd2 }
-  .red { color: #dc322f }
-  .yellow { color: #859900 }
-  .cyan { color: #2aa198 }
-}
+
 .panel {
   background: $white-80;
   padding: 30px;
   margin: 30px auto;
   max-width: 800px;
   text-align: left;
-  @extend %page-margin;
-  @include shadow(1);
 }
 
 hr {
   margin: 40px 0;
-}
-
-a {
-  color: $pink;
-  @extend %transition;
-  word-break: break-word;
-  word-wrap: break-word;
-  &:hover, &:focus, &:active { color: $purple }
 }
 
 
@@ -180,5 +104,60 @@ a {
   }
   @media (max-width: $xs-max) {
     width: 100%;
+  }
+}
+
+
+.sticky-footer-wrap {
+  position: relative;
+  display: table;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  table-layout: fixed;
+  .content-wrap {
+    display: table-row;
+    height: 100%;
+  }
+  .footer-wrap {
+    display: table-row;
+    height: 1px;
+  }
+}
+
+.corner {
+  height: 45px;
+  width: 45px;
+  z-index: 99999;
+  @extend %transition;
+  rect, polygon {
+    height: 45px;
+    width: 45px;
+    stroke: none;
+    @extend %transition;
+  }
+  &.top-left {
+    @include position(fixed, 0 null null 0);
+    rect { fill: $red; }
+  }
+  &.top-right {
+    @include position(fixed, 0 0 null null);
+    rect { fill: $blue; }
+  }
+  &.bottom-left {
+    @include position(fixed, null null 0 0);
+    rect { fill: $yellow; }
+  }
+  &.bottom-right {
+    @include position(fixed, null 0 0 null);
+    polygon { fill: #333; }
+  }
+  @media (max-width: $xs-max) {
+    height: 30px;
+    width: 30px;
+    rect, polygon {
+      height: 30px;
+      width: 30px;
+    }
   }
 }

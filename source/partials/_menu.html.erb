@@ -1,0 +1,4 @@
+<nav class="menu">
+  <a href="/" <% if current_page.data.id == "home" %>class="active"<% end %>>Home</a>
+  <a href="/blog" <% if current_page.data.id == "blog" or current_page.data.id == "blog_post" %>class="active"<% end %>>Blog</a>
+</nav>

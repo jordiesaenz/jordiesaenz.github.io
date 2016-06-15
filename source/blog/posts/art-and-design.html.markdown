@@ -1,5 +1,6 @@
 ---
 title: Art and Design
+id: blog_post
 blog_post: true
 date: 2016/04/26
 tags: art, design

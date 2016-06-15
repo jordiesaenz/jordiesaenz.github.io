@@ -9,10 +9,11 @@ $lg-max: 1499px;
 $xl-min: $lg-max + 1;
 
 // Grid System
-$container-gutter: 15px;
-$container-gutter-mobile: 15px;
-$container-gutter-md: 15px;
-$grid-gutter: 15px;
+$container-gutter: 60px;
+$container-gutter-md: 60px;
+$container-gutter-sm: 60px;
+$container-gutter-xs: 45px;
+$grid-gutter: 30px;
 
 .container {
   max-width: $xl-min - ($container-gutter * 2);
@@ -34,6 +35,10 @@ $grid-gutter: 15px;
       padding-bottom: 30px;
     }
   }
+  &-inner {
+    max-width: 960px;
+    margin: auto;
+  }
 }
 .container:before,
 .container:after {
@@ -47,8 +52,14 @@ $grid-gutter: 15px;
 }
 @media (max-width: $sm-max) {
   .container {
-    padding-right: $container-gutter-mobile;
-    padding-left: $container-gutter-mobile;
+    padding-right: $container-gutter-sm;
+    padding-left: $container-gutter-sm;
+  }
+}
+@media (max-width: $xs-max) {
+  .container {
+    padding-right: $container-gutter-xs;
+    padding-left: $container-gutter-xs;
   }
 }
 

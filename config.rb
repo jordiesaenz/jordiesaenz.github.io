@@ -1,5 +1,5 @@
 ###
-# Page options, layouts, aliases and proxies
+page "/parallax/*", layout: "parallax_layout"
 ###
 
 # Per-page layout changes:
