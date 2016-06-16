@@ -8,6 +8,8 @@ summary: Lately, I’ve been experiencing a lot of newness, which has led to lot
 image_sq: https://7585772d0354c57373d83229aa6ed9446615d684.googledrive.com/host/0B2iaOCot7-OHMmFmcjVzSGp3dzQ/newness-blog-sq.png
 image_full: https://7585772d0354c57373d83229aa6ed9446615d684.googledrive.com/host/0B2iaOCot7-OHMmFmcjVzSGp3dzQ/newness-blog.png
 image_twitter: https://7585772d0354c57373d83229aa6ed9446615d684.googledrive.com/host/0B2iaOCot7-OHMmFmcjVzSGp3dzQ/newness-blog.png
+image_height: 220
+image_width: 440
 
 ---
 

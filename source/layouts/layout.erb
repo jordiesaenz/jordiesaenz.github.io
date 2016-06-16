@@ -27,6 +27,8 @@
     <% if current_page.data.blog_post = true %>
       <meta property="og:description" content="<%= current_page.data.summary || "Jordie's personal website." %>" />
       <meta property="og:image" content="<%= current_page.data.image_full %>" />
+      <meta property="og:image:height" content="<%= current_page.data.image_height %>" />
+      <meta property="og:image:width" content="<%= current_page.data.image_width %>" />
     <% end %>
 
     <%= stylesheet_link_tag :styles %>

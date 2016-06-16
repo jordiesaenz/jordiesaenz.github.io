@@ -21,10 +21,14 @@ footer {
       text-align: center;
       position: relative;
       .fa { font-size: 2rem; }
+      a { margin: 0 7.5px;}
     }
   }
   .mc-field-group {
     height: 45px;
+    @media (max-width: $sm-max) {
+      height: auto;
+    }
   }
   #mc_embed_signup {
     float: right;
@@ -39,7 +43,7 @@ footer {
       color: $red;
       text-align: center;
       z-index: 1;
-      @include position(absolute, 0 null null 50%);
+      @include position(absolute, 15px null null 50%);
       @include transform(translateX(-50%));
     }
     label { display: none; }
@@ -82,11 +86,22 @@ footer {
       display: none;
       visibility: hidden;
     }
+    @media (max-width: $sm-max) {
+      display: block;
+      padding: 15px;
+      width: 100%;
+      @include transform(none);
+    }
   }
   .btn {
     height: 100%;
     vertical-align: middle;
     padding: 0 15px;
     @include btn-styles($white, $black, $white, $blue);
+    @media (max-width: $sm-max) {
+      display: block;
+      padding: 15px;
+      width: 100%;
+    }
   }
 }

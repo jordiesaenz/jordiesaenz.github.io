@@ -2167,9 +2167,14 @@ footer {
         text-align: center;
         position: relative; }
         footer .social .fa {
-          font-size: 2rem; } }
+          font-size: 2rem; }
+        footer .social a {
+          margin: 0 7.5px; } }
   footer .mc-field-group {
     height: 45px; }
+    @media (max-width: 767px) {
+      footer .mc-field-group {
+        height: auto; } }
   footer #mc_embed_signup {
     float: right;
     display: inline-block;
@@ -2184,7 +2189,7 @@ footer {
       text-align: center;
       z-index: 1;
       position: absolute;
-      top: 0;
+      top: 15px;
       left: 50%;
       -webkit-transform: translateX(-50%);
       -moz-transform: translateX(-50%);
@@ -2243,6 +2248,16 @@ footer {
     footer input[type="email"] + label {
       display: none;
       visibility: hidden; }
+    @media (max-width: 767px) {
+      footer input[type="email"] {
+        display: block;
+        padding: 15px;
+        width: 100%;
+        -webkit-transform: none;
+        -moz-transform: none;
+        -ms-transform: none;
+        -o-transform: none;
+        transform: none; } }
   footer .btn {
     height: 100%;
     vertical-align: middle;
@@ -2253,6 +2268,11 @@ footer {
       outline: none;
       color: #fff;
       background-color: #4ce; }
+    @media (max-width: 767px) {
+      footer .btn {
+        display: block;
+        padding: 15px;
+        width: 100%; } }
 
 section.parallax-header {
   margin: 0;
