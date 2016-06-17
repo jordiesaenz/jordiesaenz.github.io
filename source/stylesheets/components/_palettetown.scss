@@ -109,10 +109,17 @@
   }
 }
 
-$test-color: #e24;
+$test-color: #e74c3c;
 
 section.pallet-town {
   @include pallet-town($test-color, all);
+  .test-color {
+    background-color: $test-color;
+    color: #fff;
+    padding: 0 2.5px;
+    font-family: $sans-serif;
+    @include border-radius(3px);
+  }
   [class*="col"] {
     height: 200px;
     p {
