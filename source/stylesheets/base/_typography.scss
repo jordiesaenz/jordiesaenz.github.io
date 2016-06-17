@@ -41,7 +41,7 @@ a {
 }
 
 pre.codeblock {
-  white-space: normal;
+  white-space: pre;
   margin: 15px 0;
   padding: 15px;
   background-color: #002b36;
@@ -51,6 +51,7 @@ pre.codeblock {
   .red { color: #dc322f }
   .yellow { color: #859900 }
   .cyan { color: #2aa198 }
+  &.single { white-space: normal; }
 }
 
 .tagline {

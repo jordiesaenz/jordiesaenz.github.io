@@ -1783,7 +1783,7 @@ a {
     color: #4ce; }
 
 pre.codeblock {
-  white-space: normal;
+  white-space: pre;
   margin: 15px 0;
   padding: 15px;
   background-color: #002b36;
@@ -1802,6 +1802,8 @@ pre.codeblock {
     color: #859900; }
   pre.codeblock .cyan {
     color: #2aa198; }
+  pre.codeblock.single {
+    white-space: normal; }
 
 .tagline {
   font-family: "Playfair Display", serif;
