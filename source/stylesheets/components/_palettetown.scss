@@ -109,7 +109,7 @@
   }
 }
 
-$test-color: #e74c3c;
+$test-color: #f1c40f;
 
 section.pallet-town {
   @include pallet-town($test-color, all);
@@ -158,8 +158,4 @@ section.pallet-town {
       &-lightest { background-color: #{nth($color, 8)}; }
     }
   }
-}
-
-a {
-  color: $color-primary-light;
 }
