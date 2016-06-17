@@ -125,6 +125,7 @@ $prop: "width" "margin-left" "left" "right";
     .col-#{$res}#{nth($tag, $i)}-1-4  { #{nth($prop, $i)}: 25%; }
     .col-#{$res}#{nth($tag, $i)}-1-5  { #{nth($prop, $i)}: 20%; }
     .col-#{$res}#{nth($tag, $i)}-1-6  { #{nth($prop, $i)}: 16.6666667%; }
+    .col-#{$res}#{nth($tag, $i)}-1-7  { #{nth($prop, $i)}: 14.2857142%; }
     .col-#{$res}#{nth($tag, $i)}-1-8  { #{nth($prop, $i)}: 12.5%; }
     .col-#{$res}#{nth($tag, $i)}-1-10 { #{nth($prop, $i)}: 10%; }
   }

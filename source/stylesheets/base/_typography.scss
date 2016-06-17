@@ -27,7 +27,10 @@ p, a, ol, ul, li, pre {
 }
 
 
-p { font-family: $serif; }
+p {
+  font-family: $serif;
+  margin-top: 15px;
+}
 
 a {
   color: $red;
@@ -38,9 +41,11 @@ a {
 }
 
 pre.codeblock {
+  white-space: normal;
+  margin: 15px 0;
+  padding: 15px;
   background-color: #002b36;
   color: #93a1a1;
-  padding: 0px;
   @include border-radius(3px);
   .blue { color: #268bd2 }
   .red { color: #dc322f }

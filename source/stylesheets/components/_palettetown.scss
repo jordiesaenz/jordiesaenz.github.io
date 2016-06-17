@@ -1,0 +1,158 @@
+@mixin pallet-town($color, $type) {
+  $color-primary: $color !global;
+  $color-primary-darkest: desaturate(darken($color-primary, 45%), 15%) !global;
+  $color-primary-darker: desaturate(darken($color-primary, 30%), 15%) !global;
+  $color-primary-dark: desaturate(darken($color-primary, 15%), 15%) !global;
+  $color-primary-light: saturate(lighten($color-primary, 15%), 15%) !global;
+  $color-primary-lighter: saturate(lighten($color-primary, 30%), 15%) !global;
+  $color-primary-lightest: saturate(lighten($color-primary, 45%), 15%) !global;
+  @if $type == complement or complementary {
+    $color-complement: mix($color-primary, complement($color), 15%) !global;
+    $color-complement-darkest: desaturate(darken($color-complement, 45%), 15%) !global;
+    $color-complement-darker: desaturate(darken($color-complement, 30%), 15%) !global;
+    $color-complement-dark: desaturate(darken($color-complement, 15%), 15%) !global;
+    $color-complement-light: saturate(lighten($color-complement, 15%), 15%) !global;
+    $color-complement-lighter: saturate(lighten($color-complement, 30%), 15%) !global;
+    $color-complement-lightest: saturate(lighten($color-complement, 45%), 15%) !global;
+  }
+  @if $type == triad {
+    $color-triad-1: $color-primary !global;
+    $color-triad-1-darkest: $color-primary-darkest !global;
+    $color-triad-1-darker: $color-primary-darker !global;
+    $color-triad-1-dark: $color-primary-dark !global;
+    $color-triad-1-light: $color-primary-light !global;
+    $color-triad-1-lighter: $color-primary-lighter !global;
+    $color-triad-1-lightest: $color-primary-lightest !global;
+    $color-triad-2: mix($color-primary, adjust-hue($color, 120deg), 15%) !global;
+    $color-triad-2-darkest: desaturate(darken($color-triad-2, 45%), 15%) !global;
+    $color-triad-2-darker: desaturate(darken($color-triad-2, 30%), 15%) !global;
+    $color-triad-2-dark: desaturate(darken($color-triad-2, 15%), 15%) !global;
+    $color-triad-2-light: saturate(lighten($color-triad-2, 15%), 15%) !global;
+    $color-triad-2-lighter: saturate(lighten($color-triad-2, 30%), 15%) !global;
+    $color-triad-2-lightest: saturate(lighten($color-triad-2, 45%), 15%) !global;
+    $color-triad-3: mix($color-primary, adjust-hue($color, 240deg), 15%) !global;
+    $color-triad-3-darkest: desaturate(darken($color-triad-3, 45%), 15%) !global;
+    $color-triad-3-darker: desaturate(darken($color-triad-3, 30%), 15%) !global;
+    $color-triad-3-dark: desaturate(darken($color-triad-3, 15%), 15%) !global;
+    $color-triad-3-light: saturate(lighten($color-triad-3, 15%), 15%) !global;
+    $color-triad-3-lighter: saturate(lighten($color-triad-3, 30%), 15%) !global;
+    $color-triad-3-lightest: saturate(lighten($color-triad-3, 45%), 15%) !global;
+  }
+  @if $type == tetrad {
+    $color-tetrad-1: $color-primary !global;
+    $color-tetrad-1-darkest: $color-primary-darkest !global;
+    $color-tetrad-1-darker: $color-primary-darker !global;
+    $color-tetrad-1-dark: $color-primary-dark !global;
+    $color-tetrad-1-light: $color-primary-light !global;
+    $color-tetrad-1-lighter: $color-primary-lighter !global;
+    $color-tetrad-1-lightest: $color-primary-lightest !global;
+    $color-tetrad-2: mix($color-primary, adjust-hue($color, 60deg), 15%) !global;
+    $color-tetrad-2-darkest: desaturate(darken($color-tetrad-2, 45%), 15%) !global;
+    $color-tetrad-2-darker: desaturate(darken($color-tetrad-2, 30%), 15%) !global;
+    $color-tetrad-2-dark: desaturate(darken($color-tetrad-2, 15%), 15%) !global;
+    $color-tetrad-2-light: saturate(lighten($color-tetrad-2, 15%), 15%) !global;
+    $color-tetrad-2-lighter: saturate(lighten($color-tetrad-2, 30%), 15%) !global;
+    $color-tetrad-2-lightest: saturate(lighten($color-tetrad-2, 45%), 15%) !global;
+    $color-complement: mix($color-primary, complement($color), 15%) !global;
+    $color-complement-darkest: desaturate(darken($color-complement, 45%), 15%) !global;
+    $color-complement-darker: desaturate(darken($color-complement, 30%), 15%) !global;
+    $color-complement-dark: desaturate(darken($color-complement, 15%), 15%) !global;
+    $color-complement-light: saturate(lighten($color-complement, 15%), 15%) !global;
+    $color-complement-lighter: saturate(lighten($color-complement, 30%), 15%) !global;
+    $color-complement-lightest: saturate(lighten($color-complement, 45%), 15%) !global;
+    $color-tetrad-3: $color-complement !global;
+    $color-tetrad-3-darkest: $color-complement-darkest !global;
+    $color-tetrad-3-darker: $color-complement-darker !global;
+    $color-tetrad-3-dark: $color-complement-dark !global;
+    $color-tetrad-3-light: $color-complement-light !global;
+    $color-tetrad-3-lighter: $color-complement-lighter !global;
+    $color-tetrad-3-lightest: $color-complement-lightest !global;
+    $color-tetrad-4: mix($color-primary, adjust-hue($color, 270deg), 15%) !global;
+    $color-tetrad-4-darkest: desaturate(darken($color-tetrad-4, 45%), 15%) !global;
+    $color-tetrad-4-darker: desaturate(darken($color-tetrad-4, 30%), 15%) !global;
+    $color-tetrad-4-dark: desaturate(darken($color-tetrad-4, 15%), 15%) !global;
+    $color-tetrad-4-light: saturate(lighten($color-tetrad-4, 15%), 15%) !global;
+    $color-tetrad-4-lighter: saturate(lighten($color-tetrad-4, 30%), 15%) !global;
+    $color-tetrad-4-lightest: saturate(lighten($color-tetrad-4, 45%), 15%) !global;
+  }
+  @if $type == split or split-compliment {
+    $color-split-1: mix($color-primary, adjust-hue($color, 150deg), 15%) !global;
+    $color-split-1-darkest: desaturate(darken($color-split-1, 45%), 15%) !global;
+    $color-split-1-darker: desaturate(darken($color-split-1, 30%), 15%) !global;
+    $color-split-1-dark: desaturate(darken($color-split-1, 15%), 15%) !global;
+    $color-split-1-light: saturate(lighten($color-split-1, 15%), 15%) !global;
+    $color-split-1-lighter: saturate(lighten($color-split-1, 30%), 15%) !global;
+    $color-split-1-lightest: saturate(lighten($color-split-1, 45%), 15%) !global;
+    $color-split-2: mix($color-primary, adjust-hue($color, 210deg), 15%) !global;
+    $color-split-2-darkest: desaturate(darken($color-split-2, 45%), 15%) !global;
+    $color-split-2-darker: desaturate(darken($color-split-2, 30%), 15%) !global;
+    $color-split-2-dark: desaturate(darken($color-split-2, 15%), 15%) !global;
+    $color-split-2-light: saturate(lighten($color-split-2, 15%), 15%) !global;
+    $color-split-2-lighter: saturate(lighten($color-split-2, 30%), 15%) !global;
+    $color-split-2-lightest: saturate(lighten($color-split-2, 45%), 15%) !global;
+  }
+  @if $type == shades or shade {
+    $color-shade: desaturate($color-primary, 75%) !global;
+    $color-shade-darkest: darken($color-shade, 45%) !global;
+    $color-shade-darker: darken($color-shade, 30%) !global;
+    $color-shade-dark: darken($color-shade, 15%) !global;
+    $color-shade-light: lighten($color-shade, 15%) !global;
+    $color-shade-lighter: lighten($color-shade, 30%) !global;
+    $color-shade-lightest: lighten($color-shade, 45%) !global;
+  }
+  @if $type == all {
+    @include pallet-town($color, complement);
+    @include pallet-town($color, triad);
+    @include pallet-town($color, tetrad);
+    @include pallet-town($color, split);
+    @include pallet-town($color, shades);
+  }
+}
+
+$test-color: #e24;
+
+section.pallet-town {
+  @include pallet-town($test-color, all);
+  [class*="col"] {
+    height: 200px;
+    p {
+      font-family: $sans-serif;
+      font-size: 1.2rem;
+      color: #fff;
+      text-shadow: 1px 1px 1px #000;
+      text-align: center;
+      width: 100%;
+      @include position(absolute, 50% null null 50%);
+      @include transform(translateX(-50%) translateY(-50%));
+    }
+  }
+  $colors: (
+    primary : (primary, $color-primary, $color-primary-darkest, $color-primary-darker, $color-primary-dark, $color-primary-light, $color-primary-lighter, $color-primary-lightest),
+    complement : (complement, $color-complement, $color-complement-darkest, $color-complement-darker, $color-complement-dark, $color-complement-light, $color-complement-lighter, $color-complement-lightest),
+    triad-1 : (triad-1, $color-triad-1, $color-triad-1-darkest, $color-triad-1-darker, $color-triad-1-dark, $color-triad-1-light, $color-triad-1-lighter, $color-triad-1-lightest),
+    triad-2 : (triad-2, $color-triad-2, $color-triad-2-darkest, $color-triad-2-darker, $color-triad-2-dark, $color-triad-2-light, $color-triad-2-lighter, $color-triad-2-lightest),
+    triad-3 : (triad-3, $color-triad-3, $color-triad-3-darkest, $color-triad-3-darker, $color-triad-3-dark, $color-triad-3-light, $color-triad-3-lighter, $color-triad-3-lightest),
+    tetrad-1 : (tetrad-1, $color-tetrad-1, $color-tetrad-1-darkest, $color-tetrad-1-darker, $color-tetrad-1-dark, $color-tetrad-1-light, $color-tetrad-1-lighter, $color-tetrad-1-lightest),
+    tetrad-2 : (tetrad-2, $color-tetrad-2, $color-tetrad-2-darkest, $color-tetrad-2-darker, $color-tetrad-2-dark, $color-tetrad-2-light, $color-tetrad-2-lighter, $color-tetrad-2-lightest),
+    tetrad-3 : (tetrad-3, $color-tetrad-3, $color-tetrad-3-darkest, $color-tetrad-3-darker, $color-tetrad-3-dark, $color-tetrad-3-light, $color-tetrad-3-lighter, $color-tetrad-3-lightest),
+    tetrad-4 : (tetrad-4, $color-tetrad-4, $color-tetrad-4-darkest, $color-tetrad-4-darker, $color-tetrad-4-dark, $color-tetrad-4-light, $color-tetrad-4-lighter, $color-tetrad-4-lightest),
+    split-1 : (split-1, $color-split-1, $color-split-1-darkest, $color-split-1-darker, $color-split-1-dark, $color-split-1-light, $color-split-1-lighter, $color-split-1-lightest),
+    split-2 : (split-2, $color-split-2, $color-split-2-darkest, $color-split-2-darker, $color-split-2-dark, $color-split-2-light, $color-split-2-lighter, $color-split-2-lightest),
+    shade : (shade, $color-shade, $color-shade-darkest, $color-shade-darker, $color-shade-dark, $color-shade-light, $color-shade-lighter, $color-shade-lightest),
+  );
+  @each $color, $color in $colors {
+    .#{nth($color, 1)} {
+      background-color: #{nth($color, 2)};
+      &-darkest { background-color: #{nth($color, 3)}; }
+      &-darker { background-color: #{nth($color, 4)}; }
+      &-dark { background-color: #{nth($color, 5)}; }
+      &-light { background-color: #{nth($color, 6)}; }
+      &-lighter { background-color: #{nth($color, 7)}; }
+      &-lightest { background-color: #{nth($color, 8)}; }
+    }
+  }
+}
+
+a {
+  color: $color-primary-light;
+}

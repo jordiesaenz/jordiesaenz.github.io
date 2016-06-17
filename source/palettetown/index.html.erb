@@ -1,0 +1,218 @@
+---
+title: Palette Town
+id: palette_town
+header: "Palette Town"
+tagline: "Sass Mixin for Generating Color Palettes."
+image: https://7585772d0354c57373d83229aa6ed9446615d684.googledrive.com/host/0B2iaOCot7-OHMmFmcjVzSGp3dzQ/palette-town.jpg
+---
+
+<section class="pallet-town">
+  <h3>What is this?</h3>
+  <p>Sick of putting together a whole bunch of variables to build or prototype something? I am. So I made a color palette generator in Sass. You can use it too, if you'd like.</p>
+  <p><a href="https://github.com/jordiesaenz/palette-town">Check out the repo on Github.</a> Fork it, make some suggestions, tear me apart.</p>
+  <p>It's pretty simple, just include the mixin, pass in your color and which type of palette you'd like to create, and voila! A whole bunch of friendly variables are at your disposal for your stylesheets.</p>
+  <p>Here are the different types of palettes, and at the bottom you'll see that you can include them all.</p>
+  <hr />
+  <h3>Complement</h3>
+  <pre class="codeblock">
+    <span class="yellow">@include</span> <span class="blue">pallet-town</span><span class="cyan">(</span>$color, <span class="blue">complement</span><span class="cyan">)</span>;
+  </pre>
+  <div class="grid grid--flush">
+    <div class="primary-darkest col-sm-1-7"><p>$color-primary-darkest</p></div>
+    <div class="primary-darker col-sm-1-7"><p>$color-primary-darker</p></div>
+    <div class="primary-dark col-sm-1-7"><p>$color-primary-dark</p></div>
+    <div class="primary col-sm-1-7"><p>$color-primary</p></div>
+    <div class="primary-light col-sm-1-7"><p>$color-primary-light</p></div>
+    <div class="primary-lighter col-sm-1-7"><p>$color-primary-lighter</p></div>
+    <div class="primary-lightest col-sm-1-7"><p>$color-primary-lightest</p></div>
+    <div class="complement-darkest col-sm-1-7"><p>$color-complement-darkest</p></div>
+    <div class="complement-darker col-sm-1-7"><p>$color-complement-darker</p></div>
+    <div class="complement-dark col-sm-1-7"><p>$color-complement-dark</p></div>
+    <div class="complement col-sm-1-7"><p>$color-complement</p></div>
+    <div class="complement-light col-sm-1-7"><p>$color-complement-light</p></div>
+    <div class="complement-lighter col-sm-1-7"><p>$color-complement-lighter</p></div>
+    <div class="complement-lightest col-sm-1-7"><p>$color-complement-lightest</p></div>
+  </div>
+  <hr />
+  <h3>Split Complement</h3>
+  <pre class="codeblock">
+    <span class="yellow">@include</span> <span class="blue">pallet-town</span><span class="cyan">(</span>$color, <span class="blue">split</span><span class="cyan">)</span>;
+  </pre>
+  <div class="grid grid--flush">
+    <div class="primary-darkest col-sm-1-7"><p>$color-primary-darkest</p></div>
+    <div class="primary-darker col-sm-1-7"><p>$color-primary-darker</p></div>
+    <div class="primary-dark col-sm-1-7"><p>$color-primary-dark</p></div>
+    <div class="primary col-sm-1-7"><p>$color-primary</p></div>
+    <div class="primary-light col-sm-1-7"><p>$color-primary-light</p></div>
+    <div class="primary-lighter col-sm-1-7"><p>$color-primary-lighter</p></div>
+    <div class="primary-lightest col-sm-1-7"><p>$color-primary-lightest</p></div>
+    <div class="split-1-darkest col-sm-1-7"><p>$color-split-1-darkest</p></div>
+    <div class="split-1-darker col-sm-1-7"><p>$color-split-1-darker</p></div>
+    <div class="split-1-dark col-sm-1-7"><p>$color-split-1-dark</p></div>
+    <div class="split-1 col-sm-1-7"><p>$color-split-1</p></div>
+    <div class="split-1-light col-sm-1-7"><p>$color-split-1-light</p></div>
+    <div class="split-1-lighter col-sm-1-7"><p>$color-split-1-lighter</p></div>
+    <div class="split-1-lightest col-sm-1-7"><p>$color-split-1-lightest</p></div>
+    <div class="split-2-darkest col-sm-1-7"><p>$color-split-2-darkest</p></div>
+    <div class="split-2-darker col-sm-1-7"><p>$color-split-2-darker</p></div>
+    <div class="split-2-dark col-sm-1-7"><p>$color-split-2-dark</p></div>
+    <div class="split-2 col-sm-1-7"><p>$color-split-2</p></div>
+    <div class="split-2-light col-sm-1-7"><p>$color-split-2-light</p></div>
+    <div class="split-2-lighter col-sm-1-7"><p>$color-split-2-lighter</p></div>
+    <div class="split-2-lightest col-sm-1-7"><p>$color-split-2-lightest</p></div>
+  </div>
+  <hr />
+  <h3>Triad</h3>
+  <pre class="codeblock">
+    <span class="yellow">@include</span> <span class="blue">pallet-town</span><span class="cyan">(</span>$color, <span class="blue">triad</span><span class="cyan">)</span>;
+  </pre>
+  <div class="grid grid--flush">
+    <div class="triad-1-darkest col-sm-1-7"><p>$color-triad-1-darkest</p></div>
+    <div class="triad-1-darker col-sm-1-7"><p>$color-triad-1-darker</p></div>
+    <div class="triad-1-dark col-sm-1-7"><p>$color-triad-1-dark</p></div>
+    <div class="triad-1 col-sm-1-7"><p>$color-triad-1</p></div>
+    <div class="triad-1-light col-sm-1-7"><p>$color-triad-1-light</p></div>
+    <div class="triad-1-lighter col-sm-1-7"><p>$color-triad-1-lighter</p></div>
+    <div class="triad-1-lightest col-sm-1-7"><p>$color-triad-1-lightest</p></div>
+    <div class="triad-2-darkest col-sm-1-7"><p>$color-triad-2-darkest</p></div>
+    <div class="triad-2-darker col-sm-1-7"><p>$color-triad-2-darker</p></div>
+    <div class="triad-2-dark col-sm-1-7"><p>$color-triad-2-dark</p></div>
+    <div class="triad-2 col-sm-1-7"><p>$color-triad-2</p></div>
+    <div class="triad-2-light col-sm-1-7"><p>$color-triad-2-light</p></div>
+    <div class="triad-2-lighter col-sm-1-7"><p>$color-triad-2-lighter</p></div>
+    <div class="triad-2-lightest col-sm-1-7"><p>$color-triad-2-lightest</p></div>
+    <div class="triad-3-darkest col-sm-1-7"><p>$color-triad-3-darkest</p></div>
+    <div class="triad-3-darker col-sm-1-7"><p>$color-triad-3-darker</p></div>
+    <div class="triad-3-dark col-sm-1-7"><p>$color-triad-3-dark</p></div>
+    <div class="triad-3 col-sm-1-7"><p>$color-triad-3</p></div>
+    <div class="triad-3-light col-sm-1-7"><p>$color-triad-3-light</p></div>
+    <div class="triad-3-lighter col-sm-1-7"><p>$color-triad-3-lighter</p></div>
+    <div class="triad-3-lightest col-sm-1-7"><p>$color-triad-3-lightest</p></div>
+  </div>
+  <hr />
+  <h3>Tetrad</h3>
+  <pre class="codeblock">
+    <span class="yellow">@include</span> <span class="blue">pallet-town</span><span class="cyan">(</span>$color, <span class="blue">tetrad</span><span class="cyan">)</span>;
+  </pre>
+  <div class="grid grid--flush">
+    <div class="tetrad-1-darkest col-sm-1-7"><p>$color-tetrad-1-darkest</p></div>
+    <div class="tetrad-1-darker col-sm-1-7"><p>$color-tetrad-1-darker</p></div>
+    <div class="tetrad-1-dark col-sm-1-7"><p>$color-tetrad-1-dark</p></div>
+    <div class="tetrad-1 col-sm-1-7"><p>$color-tetrad-1</p></div>
+    <div class="tetrad-1-light col-sm-1-7"><p>$color-tetrad-1-light</p></div>
+    <div class="tetrad-1-lighter col-sm-1-7"><p>$color-tetrad-1-lighter</p></div>
+    <div class="tetrad-1-lightest col-sm-1-7"><p>$color-tetrad-1-lightest</p></div>
+    <div class="tetrad-2-darkest col-sm-1-7"><p>$color-tetrad-2-darkest</p></div>
+    <div class="tetrad-2-darker col-sm-1-7"><p>$color-tetrad-2-darker</p></div>
+    <div class="tetrad-2-dark col-sm-1-7"><p>$color-tetrad-2-dark</p></div>
+    <div class="tetrad-2 col-sm-1-7"><p>$color-tetrad-2</p></div>
+    <div class="tetrad-2-light col-sm-1-7"><p>$color-tetrad-2-light</p></div>
+    <div class="tetrad-2-lighter col-sm-1-7"><p>$color-tetrad-2-lighter</p></div>
+    <div class="tetrad-2-lightest col-sm-1-7"><p>$color-tetrad-2-lightest</p></div>
+    <div class="tetrad-3-darkest col-sm-1-7"><p>$color-tetrad-3-darkest</p></div>
+    <div class="tetrad-3-darker col-sm-1-7"><p>$color-tetrad-3-darker</p></div>
+    <div class="tetrad-3-dark col-sm-1-7"><p>$color-tetrad-3-dark</p></div>
+    <div class="tetrad-3 col-sm-1-7"><p>$color-tetrad-3</p></div>
+    <div class="tetrad-3-light col-sm-1-7"><p>$color-tetrad-3-light</p></div>
+    <div class="tetrad-3-lighter col-sm-1-7"><p>$color-tetrad-3-lighter</p></div>
+    <div class="tetrad-3-lightest col-sm-1-7"><p>$color-tetrad-3-lightest</p></div>
+    <div class="tetrad-4-darkest col-sm-1-7"><p>$color-tetrad-4-darkest</p></div>
+    <div class="tetrad-4-darker col-sm-1-7"><p>$color-tetrad-4-darker</p></div>
+    <div class="tetrad-4-dark col-sm-1-7"><p>$color-tetrad-4-dark</p></div>
+    <div class="tetrad-4 col-sm-1-7"><p>$color-tetrad-4</p></div>
+    <div class="tetrad-4-light col-sm-1-7"><p>$color-tetrad-4-light</p></div>
+    <div class="tetrad-4-lighter col-sm-1-7"><p>$color-tetrad-4-lighter</p></div>
+    <div class="tetrad-4-lightest col-sm-1-7"><p>$color-tetrad-4-lightest</p></div>
+  </div>
+  <hr />
+  <h3>Shades</h3>
+  <pre class="codeblock">
+    <span class="yellow">@include</span> <span class="blue">pallet-town</span><span class="cyan">(</span>$color, <span class="blue">shade</span><span class="cyan">)</span>;
+  </pre>
+  <div class="grid grid--flush">
+    <div class="primary-darkest col-sm-1-7"><p>$color-primary-darkest</p></div>
+    <div class="primary-darker col-sm-1-7"><p>$color-primary-darker</p></div>
+    <div class="primary-dark col-sm-1-7"><p>$color-primary-dark</p></div>
+    <div class="primary col-sm-1-7"><p>$color-primary</p></div>
+    <div class="primary-light col-sm-1-7"><p>$color-primary-light</p></div>
+    <div class="primary-lighter col-sm-1-7"><p>$color-primary-lighter</p></div>
+    <div class="primary-lightest col-sm-1-7"><p>$color-primary-lightest</p></div>
+    <div class="shade-darkest col-sm-1-7"><p>$color-shade-darkest</p></div>
+    <div class="shade-darker col-sm-1-7"><p>$color-shade-darker</p></div>
+    <div class="shade-dark col-sm-1-7"><p>$color-shade-dark</p></div>
+    <div class="shade col-sm-1-7"><p>$color-shade</p></div>
+    <div class="shade-light col-sm-1-7"><p>$color-shade-light</p></div>
+    <div class="shade-lighter col-sm-1-7"><p>$color-shade-lighter</p></div>
+    <div class="shade-lightest col-sm-1-7"><p>$color-shade-lightest</p></div>
+  </div>
+  <hr />
+  <h3>All</h3>
+  <pre class="codeblock">
+    <span class="yellow">@include</span> <span class="blue">pallet-town</span><span class="cyan">(</span>$color, <span class="blue">all</span><span class="cyan">)</span>;
+  </pre>
+  <div class="grid grid--flush">
+    <div class="primary-darkest col-sm-1-7"><p>$color-primary-darkest</p></div>
+    <div class="primary-darker col-sm-1-7"><p>$color-primary-darker</p></div>
+    <div class="primary-dark col-sm-1-7"><p>$color-primary-dark</p></div>
+    <div class="primary col-sm-1-7"><p>$color-primary</p></div>
+    <div class="primary-light col-sm-1-7"><p>$color-primary-light</p></div>
+    <div class="primary-lighter col-sm-1-7"><p>$color-primary-lighter</p></div>
+    <div class="primary-lightest col-sm-1-7"><p>$color-primary-lightest</p></div>
+    <div class="tetrad-2-darkest col-sm-1-7"><p>$color-tetrad-2-darkest</p></div>
+    <div class="tetrad-2-darker col-sm-1-7"><p>$color-tetrad-2-darker</p></div>
+    <div class="tetrad-2-dark col-sm-1-7"><p>$color-tetrad-2-dark</p></div>
+    <div class="tetrad-2 col-sm-1-7"><p>$color-tetrad-2</p></div>
+    <div class="tetrad-2-light col-sm-1-7"><p>$color-tetrad-2-light</p></div>
+    <div class="tetrad-2-lighter col-sm-1-7"><p>$color-tetrad-2-lighter</p></div>
+    <div class="tetrad-2-lightest col-sm-1-7"><p>$color-tetrad-2-lightest</p></div>
+    <div class="triad-2-darkest col-sm-1-7"><p>$color-triad-2-darkest</p></div>
+    <div class="triad-2-darker col-sm-1-7"><p>$color-triad-2-darker</p></div>
+    <div class="triad-2-dark col-sm-1-7"><p>$color-triad-2-dark</p></div>
+    <div class="triad-2 col-sm-1-7"><p>$color-triad-2</p></div>
+    <div class="triad-2-light col-sm-1-7"><p>$color-triad-2-light</p></div>
+    <div class="triad-2-lighter col-sm-1-7"><p>$color-triad-2-lighter</p></div>
+    <div class="triad-2-lightest col-sm-1-7"><p>$color-triad-2-lightest</p></div>
+    <div class="split-1-darkest col-sm-1-7"><p>$color-split-1-darkest</p></div>
+    <div class="split-1-darker col-sm-1-7"><p>$color-split-1-darker</p></div>
+    <div class="split-1-dark col-sm-1-7"><p>$color-split-1-dark</p></div>
+    <div class="split-1 col-sm-1-7"><p>$color-split-1</p></div>
+    <div class="split-1-light col-sm-1-7"><p>$color-split-1-light</p></div>
+    <div class="split-1-lighter col-sm-1-7"><p>$color-split-1-lighter</p></div>
+    <div class="split-1-lightest col-sm-1-7"><p>$color-split-1-lightest</p></div>
+    <div class="complement-darkest col-sm-1-7"><p>$color-complement-darkest</p></div>
+    <div class="complement-darker col-sm-1-7"><p>$color-complement-darker</p></div>
+    <div class="complement-dark col-sm-1-7"><p>$color-complement-dark</p></div>
+    <div class="complement col-sm-1-7"><p>$color-complement</p></div>
+    <div class="complement-light col-sm-1-7"><p>$color-complement-light</p></div>
+    <div class="complement-lighter col-sm-1-7"><p>$color-complement-lighter</p></div>
+    <div class="complement-lightest col-sm-1-7"><p>$color-complement-lightest</p></div>
+    <div class="split-2-darkest col-sm-1-7"><p>$color-split-2-darkest</p></div>
+    <div class="split-2-darker col-sm-1-7"><p>$color-split-2-darker</p></div>
+    <div class="split-2-dark col-sm-1-7"><p>$color-split-2-dark</p></div>
+    <div class="split-2 col-sm-1-7"><p>$color-split-2</p></div>
+    <div class="split-2-light col-sm-1-7"><p>$color-split-2-light</p></div>
+    <div class="split-2-lighter col-sm-1-7"><p>$color-split-2-lighter</p></div>
+    <div class="split-2-lightest col-sm-1-7"><p>$color-split-2-lightest</p></div>
+    <div class="triad-3-darkest col-sm-1-7"><p>$color-triad-3-darkest</p></div>
+    <div class="triad-3-darker col-sm-1-7"><p>$color-triad-3-darker</p></div>
+    <div class="triad-3-dark col-sm-1-7"><p>$color-triad-3-dark</p></div>
+    <div class="triad-3 col-sm-1-7"><p>$color-triad-3</p></div>
+    <div class="triad-3-light col-sm-1-7"><p>$color-triad-3-light</p></div>
+    <div class="triad-3-lighter col-sm-1-7"><p>$color-triad-3-lighter</p></div>
+    <div class="triad-3-lightest col-sm-1-7"><p>$color-triad-3-lightest</p></div>
+    <div class="tetrad-4-darkest col-sm-1-7"><p>$color-tetrad-4-darkest</p></div>
+    <div class="tetrad-4-darker col-sm-1-7"><p>$color-tetrad-4-darker</p></div>
+    <div class="tetrad-4-dark col-sm-1-7"><p>$color-tetrad-4-dark</p></div>
+    <div class="tetrad-4 col-sm-1-7"><p>$color-tetrad-4</p></div>
+    <div class="tetrad-4-light col-sm-1-7"><p>$color-tetrad-4-light</p></div>
+    <div class="tetrad-4-lighter col-sm-1-7"><p>$color-tetrad-4-lighter</p></div>
+    <div class="tetrad-4-lightest col-sm-1-7"><p>$color-tetrad-4-lightest</p></div>
+    <div class="shade-darkest col-sm-1-7"><p>$color-shade-darkest</p></div>
+    <div class="shade-darker col-sm-1-7"><p>$color-shade-darker</p></div>
+    <div class="shade-dark col-sm-1-7"><p>$color-shade-dark</p></div>
+    <div class="shade col-sm-1-7"><p>$color-shade</p></div>
+    <div class="shade-light col-sm-1-7"><p>$color-shade-light</p></div>
+    <div class="shade-lighter col-sm-1-7"><p>$color-shade-lighter</p></div>
+    <div class="shade-lightest col-sm-1-7"><p>$color-shade-lightest</p></div>
+  </div>
+</section>

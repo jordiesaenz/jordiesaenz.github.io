@@ -16,19 +16,28 @@
     <link rel="icon" type="image/png" href="https://7585772d0354c57373d83229aa6ed9446615d684.googledrive.com/host/0B2iaOCot7-OHMmFmcjVzSGp3dzQ/favicon.png">
 
     <!-- SEO Tags -->
-    <title><%= current_page.data.title || "Jordie Saenz" %></title>
-    <meta property="og:title" content="<%= current_page.data.title || "Jordie Saenz" %>" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@jordiesaenz" />
-    <meta name="twitter:creator" content="@jordiesaenz" />
-    <meta property="og:url" content="http://www.jordiesaenz.com<%= current_page.url %>" />
-    <meta property="og:site_name" content="Jordie Saenz" />
+    <% if current_page.data.id == "palette_town" %>
+      <title>Palette Town | Sass Mixin for Generating Color Palettes</title>
+      <meta property="og:title" content="Palette Town | Sass Mixin for Generating Color Palettes" />
+      <meta property="og:description" content="Palette Town | Sass Mixin for Generating Color Palettes" />
+      <meta property="og:image" content="<%= current_page.data.image %>" />
+      <meta property="og:image:height" content="220" />
+      <meta property="og:image:width" content="440" />
+    <% else %>
+      <title><%= current_page.data.title || "Jordie Saenz" %></title>
+      <meta property="og:title" content="<%= current_page.data.title || "Jordie Saenz" %>" />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:site" content="@jordiesaenz" />
+      <meta name="twitter:creator" content="@jordiesaenz" />
+      <meta property="og:url" content="http://www.jordiesaenz.com<%= current_page.url %>" />
+      <meta property="og:site_name" content="Jordie Saenz" />
 
-    <% if current_page.data.blog_post = true %>
-      <meta property="og:description" content="<%= current_page.data.summary || "Jordie's personal website." %>" />
-      <meta property="og:image" content="<%= current_page.data.image_full %>" />
-      <meta property="og:image:height" content="<%= current_page.data.image_height %>" />
-      <meta property="og:image:width" content="<%= current_page.data.image_width %>" />
+      <% if current_page.data.blog_post = true %>
+        <meta property="og:description" content="<%= current_page.data.summary || "Jordie's personal website." %>" />
+        <meta property="og:image" content="<%= current_page.data.image_full %>" />
+        <meta property="og:image:height" content="<%= current_page.data.image_height %>" />
+        <meta property="og:image:width" content="<%= current_page.data.image_width %>" />
+      <% end %>
     <% end %>
 
     <%= stylesheet_link_tag :styles %>

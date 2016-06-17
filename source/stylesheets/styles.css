@@ -111,6 +111,9 @@
 .col-xs-1-6 {
   width: 16.6666667%; }
 
+.col-xs-1-7 {
+  width: 14.2857142%; }
+
 .col-xs-1-8 {
   width: 12.5%; }
 
@@ -170,6 +173,9 @@
 
 .col-xs-offset-1-6 {
   margin-left: 16.6666667%; }
+
+.col-xs-offset-1-7 {
+  margin-left: 14.2857142%; }
 
 .col-xs-offset-1-8 {
   margin-left: 12.5%; }
@@ -231,6 +237,9 @@
 .col-xs-push-1-6 {
   left: 16.6666667%; }
 
+.col-xs-push-1-7 {
+  left: 14.2857142%; }
+
 .col-xs-push-1-8 {
   left: 12.5%; }
 
@@ -290,6 +299,9 @@
 
 .col-xs-pull-1-6 {
   right: 16.6666667%; }
+
+.col-xs-pull-1-7 {
+  right: 14.2857142%; }
 
 .col-xs-pull-1-8 {
   right: 12.5%; }
@@ -352,6 +364,9 @@
   .col-sm-1-6 {
     width: 16.6666667%; }
 
+  .col-sm-1-7 {
+    width: 14.2857142%; }
+
   .col-sm-1-8 {
     width: 12.5%; }
 
@@ -411,6 +426,9 @@
 
   .col-sm-offset-1-6 {
     margin-left: 16.6666667%; }
+
+  .col-sm-offset-1-7 {
+    margin-left: 14.2857142%; }
 
   .col-sm-offset-1-8 {
     margin-left: 12.5%; }
@@ -472,6 +490,9 @@
   .col-sm-push-1-6 {
     left: 16.6666667%; }
 
+  .col-sm-push-1-7 {
+    left: 14.2857142%; }
+
   .col-sm-push-1-8 {
     left: 12.5%; }
 
@@ -531,6 +552,9 @@
 
   .col-sm-pull-1-6 {
     right: 16.6666667%; }
+
+  .col-sm-pull-1-7 {
+    right: 14.2857142%; }
 
   .col-sm-pull-1-8 {
     right: 12.5%; }
@@ -592,6 +616,9 @@
   .col-md-1-6 {
     width: 16.6666667%; }
 
+  .col-md-1-7 {
+    width: 14.2857142%; }
+
   .col-md-1-8 {
     width: 12.5%; }
 
@@ -651,6 +678,9 @@
 
   .col-md-offset-1-6 {
     margin-left: 16.6666667%; }
+
+  .col-md-offset-1-7 {
+    margin-left: 14.2857142%; }
 
   .col-md-offset-1-8 {
     margin-left: 12.5%; }
@@ -712,6 +742,9 @@
   .col-md-push-1-6 {
     left: 16.6666667%; }
 
+  .col-md-push-1-7 {
+    left: 14.2857142%; }
+
   .col-md-push-1-8 {
     left: 12.5%; }
 
@@ -771,6 +804,9 @@
 
   .col-md-pull-1-6 {
     right: 16.6666667%; }
+
+  .col-md-pull-1-7 {
+    right: 14.2857142%; }
 
   .col-md-pull-1-8 {
     right: 12.5%; }
@@ -832,6 +868,9 @@
   .col-lg-1-6 {
     width: 16.6666667%; }
 
+  .col-lg-1-7 {
+    width: 14.2857142%; }
+
   .col-lg-1-8 {
     width: 12.5%; }
 
@@ -891,6 +930,9 @@
 
   .col-lg-offset-1-6 {
     margin-left: 16.6666667%; }
+
+  .col-lg-offset-1-7 {
+    margin-left: 14.2857142%; }
 
   .col-lg-offset-1-8 {
     margin-left: 12.5%; }
@@ -952,6 +994,9 @@
   .col-lg-push-1-6 {
     left: 16.6666667%; }
 
+  .col-lg-push-1-7 {
+    left: 14.2857142%; }
+
   .col-lg-push-1-8 {
     left: 12.5%; }
 
@@ -1011,6 +1056,9 @@
 
   .col-lg-pull-1-6 {
     right: 16.6666667%; }
+
+  .col-lg-pull-1-7 {
+    right: 14.2857142%; }
 
   .col-lg-pull-1-8 {
     right: 12.5%; }
@@ -1072,6 +1120,9 @@
   .col-xl-1-6 {
     width: 16.6666667%; }
 
+  .col-xl-1-7 {
+    width: 14.2857142%; }
+
   .col-xl-1-8 {
     width: 12.5%; }
 
@@ -1131,6 +1182,9 @@
 
   .col-xl-offset-1-6 {
     margin-left: 16.6666667%; }
+
+  .col-xl-offset-1-7 {
+    margin-left: 14.2857142%; }
 
   .col-xl-offset-1-8 {
     margin-left: 12.5%; }
@@ -1192,6 +1246,9 @@
   .col-xl-push-1-6 {
     left: 16.6666667%; }
 
+  .col-xl-push-1-7 {
+    left: 14.2857142%; }
+
   .col-xl-push-1-8 {
     left: 12.5%; }
 
@@ -1251,6 +1308,9 @@
 
   .col-xl-pull-1-6 {
     right: 16.6666667%; }
+
+  .col-xl-pull-1-7 {
+    right: 14.2857142%; }
 
   .col-xl-pull-1-8 {
     right: 12.5%; }
@@ -1712,7 +1772,8 @@ p, a, ol, ul, li, pre {
   font-weight: 400; }
 
 p {
-  font-family: "Playfair Display", serif; }
+  font-family: "Playfair Display", serif;
+  margin-top: 15px; }
 
 a {
   color: #e46;
@@ -1722,9 +1783,11 @@ a {
     color: #4ce; }
 
 pre.codeblock {
+  white-space: normal;
+  margin: 15px 0;
+  padding: 15px;
   background-color: #002b36;
   color: #93a1a1;
-  padding: 0px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
@@ -4236,5 +4299,194 @@ section.parallax-body {
 
 .fa-percent:before {
   content: "\f295"; }
+
+section.pallet-town [class*="col"] {
+  height: 200px; }
+  section.pallet-town [class*="col"] p {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.2rem;
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -o-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%); }
+section.pallet-town .primary {
+  background-color: #e24; }
+  section.pallet-town .primary-darkest {
+    background-color: #24060b; }
+  section.pallet-town .primary-darker {
+    background-color: #66111f; }
+  section.pallet-town .primary-dark {
+    background-color: #a71d34; }
+  section.pallet-town .primary-light {
+    background-color: #ff5e78; }
+  section.pallet-town .primary-lighter {
+    background-color: #ffaab8; }
+  section.pallet-town .primary-lightest {
+    background-color: #fff7f8; }
+section.pallet-town .complement {
+  background-color: #41cfb8; }
+  section.pallet-town .complement-darkest {
+    background-color: #0c1f1c; }
+  section.pallet-town .complement-darker {
+    background-color: #21564d; }
+  section.pallet-town .complement-dark {
+    background-color: #368d7f; }
+  section.pallet-town .complement-light {
+    background-color: #72ebd7; }
+  section.pallet-town .complement-lighter {
+    background-color: #b5f4ea; }
+  section.pallet-town .complement-lightest {
+    background-color: #f8fefd; }
+section.pallet-town .triad-1 {
+  background-color: #e24; }
+  section.pallet-town .triad-1-darkest {
+    background-color: #24060b; }
+  section.pallet-town .triad-1-darker {
+    background-color: #66111f; }
+  section.pallet-town .triad-1-dark {
+    background-color: #a71d34; }
+  section.pallet-town .triad-1-light {
+    background-color: #ff5e78; }
+  section.pallet-town .triad-1-lighter {
+    background-color: #ffaab8; }
+  section.pallet-town .triad-1-lightest {
+    background-color: #fff7f8; }
+section.pallet-town .triad-2 {
+  background-color: #5ecf27; }
+  section.pallet-town .triad-2-darkest {
+    background-color: #070d04; }
+  section.pallet-town .triad-2-darker {
+    background-color: #264716; }
+  section.pallet-town .triad-2-dark {
+    background-color: #458228; }
+  section.pallet-town .triad-2-light {
+    background-color: #86ef53; }
+  section.pallet-town .triad-2-lighter {
+    background-color: #b8f699; }
+  section.pallet-town .triad-2-lightest {
+    background-color: #e9fcdf; }
+section.pallet-town .triad-3 {
+  background-color: #413fd5; }
+  section.pallet-town .triad-3-darkest {
+    background-color: #0c0c23; }
+  section.pallet-town .triad-3-darker {
+    background-color: #201f5c; }
+  section.pallet-town .triad-3-dark {
+    background-color: #343395; }
+  section.pallet-town .triad-3-light {
+    background-color: #7472ef; }
+  section.pallet-town .triad-3-lighter {
+    background-color: #b7b6f7; }
+  section.pallet-town .triad-3-lightest {
+    background-color: #fbfbff; }
+section.pallet-town .tetrad-1 {
+  background-color: #e24; }
+  section.pallet-town .tetrad-1-darkest {
+    background-color: #24060b; }
+  section.pallet-town .tetrad-1-darker {
+    background-color: #66111f; }
+  section.pallet-town .tetrad-1-dark {
+    background-color: #a71d34; }
+  section.pallet-town .tetrad-1-light {
+    background-color: #ff5e78; }
+  section.pallet-town .tetrad-1-lighter {
+    background-color: #ffaab8; }
+  section.pallet-town .tetrad-1-lightest {
+    background-color: #fff7f8; }
+section.pallet-town .tetrad-2 {
+  background-color: #eeb327; }
+  section.pallet-town .tetrad-2-darkest {
+    background-color: #281f07; }
+  section.pallet-town .tetrad-2-darker {
+    background-color: #6a5012; }
+  section.pallet-town .tetrad-2-dark {
+    background-color: #ab811e; }
+  section.pallet-town .tetrad-2-light {
+    background-color: #ffd163; }
+  section.pallet-town .tetrad-2-lighter {
+    background-color: #ffe7af; }
+  section.pallet-town .tetrad-2-lightest {
+    background-color: #fffefc; }
+section.pallet-town .tetrad-3 {
+  background-color: #41cfb8; }
+  section.pallet-town .tetrad-3-darkest {
+    background-color: #0c1f1c; }
+  section.pallet-town .tetrad-3-darker {
+    background-color: #21564d; }
+  section.pallet-town .tetrad-3-dark {
+    background-color: #368d7f; }
+  section.pallet-town .tetrad-3-light {
+    background-color: #72ebd7; }
+  section.pallet-town .tetrad-3-lighter {
+    background-color: #b5f4ea; }
+  section.pallet-town .tetrad-3-lightest {
+    background-color: #f8fefd; }
+section.pallet-town .tetrad-4 {
+  background-color: #7a22d5; }
+  section.pallet-town .tetrad-4-darkest {
+    background-color: #09040e; }
+  section.pallet-town .tetrad-4-darker {
+    background-color: #2f144a; }
+  section.pallet-town .tetrad-4-dark {
+    background-color: #542486; }
+  section.pallet-town .tetrad-4-light {
+    background-color: #a050f3; }
+  section.pallet-town .tetrad-4-lighter {
+    background-color: #c798f8; }
+  section.pallet-town .tetrad-4-lightest {
+    background-color: #eee0fd; }
+section.pallet-town .split-1 {
+  background-color: #41cf61; }
+  section.pallet-town .split-1-darkest {
+    background-color: #0c1f10; }
+  section.pallet-town .split-1-darker {
+    background-color: #21562d; }
+  section.pallet-town .split-1-dark {
+    background-color: #368d4a; }
+  section.pallet-town .split-1-light {
+    background-color: #72eb8d; }
+  section.pallet-town .split-1-lighter {
+    background-color: #b5f4c3; }
+  section.pallet-town .split-1-lightest {
+    background-color: #f8fef9; }
+section.pallet-town .split-2 {
+  background-color: #4196d5; }
+  section.pallet-town .split-2-darkest {
+    background-color: #0c1a24; }
+  section.pallet-town .split-2-darker {
+    background-color: #20435d; }
+  section.pallet-town .split-2-dark {
+    background-color: #346c96; }
+  section.pallet-town .split-2-light {
+    background-color: #74baef; }
+  section.pallet-town .split-2-lighter {
+    background-color: #b8dcf7; }
+  section.pallet-town .split-2-lightest {
+    background-color: #fdfeff; }
+section.pallet-town .shade {
+  background-color: #957b80; }
+  section.pallet-town .shade-darkest {
+    background-color: #181314; }
+  section.pallet-town .shade-darker {
+    background-color: #423537; }
+  section.pallet-town .shade-dark {
+    background-color: #6c575b; }
+  section.pallet-town .shade-light {
+    background-color: #b7a6a8; }
+  section.pallet-town .shade-lighter {
+    background-color: #d9d0d1; }
+  section.pallet-town .shade-lightest {
+    background-color: #fbfafa; }
+
+a {
+  color: #ff5e78; }
 
 /*# sourceMappingURL=styles.css.map */
