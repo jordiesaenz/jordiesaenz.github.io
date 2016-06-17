@@ -51,7 +51,7 @@ footer {
       font-family: $sans-serif;
       display: inline;
       font-size: 1.2rem;
-      @include position(absolute, -20px null null 0);
+      @include position(absolute, -45px null null 0);
       @include transform(translateX(6px));
       @media (max-width: $sm-max) {
         display: block;
