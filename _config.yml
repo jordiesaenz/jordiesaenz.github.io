@@ -25,7 +25,7 @@ github_username:  jordiesaenz
 markdown: kramdown
 
 # Gems
-gems: [bourbon]
+gems:
 
 # Permalink
 permalink: /posts/:title
