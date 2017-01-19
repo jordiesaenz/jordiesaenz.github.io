@@ -1,0 +1,155 @@
+////////////////////////
+//// CONFIGURATION ////
+//////////////////////
+
+$flex-enabled: true;
+$align-items: stretch; // flex-start | flex-end | center | baseline | stretch
+$align-content: flex-start; // flex-start | flex-end | center | space-between | space-around | stretch
+$justify-content: center; // flex-start | flex-end | center | space-between | space-around
+$flex-direction: row; // row (ltr) | row-reverse (rtl) | column (ttb) | column-reverse (btt)
+$flex-wrap: wrap; // nowrap (default; all items on one line) | wrap | wrap-reverse
+
+// Breakpoints //
+$xs-max: 479px;
+$sm-min: $xs-max + 1;
+$sm-max: 767px;
+$md-min: $sm-max + 1;
+$md-max: 991px;
+$lg-min: $md-max + 1;
+$lg-max: 1019px;
+$xl-min: $lg-max + 1;
+$breakpoints: (
+  xs: $xs-max,
+  sm: $sm-min,
+  md: $md-min,
+  lg: $lg-min,
+  xl: $xl-min
+);
+
+// Column Sizes //
+$column-sizes : (
+	1	:	(1, 2, 3, 4, 5, 6, 8, 10),
+	2	:	(3, 5),
+	3	:	(4, 5, 8, 10),
+	5	:	(6, 8),
+	7	:	(8, 10),
+  9 : (10)
+);
+
+// Grid Spacing //
+$container-gutter: 20px;
+$grid-gutter: 20px;
+
+$tag: "" "-offset" "-push" "-pull";
+$prop: "width" "margin-left" "left" "right";
+
+
+// Styles
+.container {
+  max-width: $xl-min - ($container-gutter * 2);
+  position: relative;
+  @include margin(null auto);
+  @include padding(null $container-gutter);
+  &--fluid {
+    max-width: 100%;
+    width: 100%;
+  }
+  &:before, &:after { @include clearfix; }
+}
+
+.grid {
+  font-size: 0;
+  text-align: left;
+  @include margin(null (-$grid-gutter/2));
+  @if $flex-enabled {
+    @supports (display: flex) {
+      @include display(flex);
+      @include align-items($align-items);
+      @include align-content($align-content);
+    	@include justify-content($justify-content);
+    	@include flex-direction($flex-direction);
+    	@include flex-wrap($flex-wrap);
+    }
+  }
+  &:before, &:after { @include clearfix; }
+  > [class^="col"] {
+    box-sizing: border-box;
+    display: inline-block;
+    font-size: 16px;
+    @include margin(0 ($grid-gutter / 2) ($grid-gutter / 2));
+    min-height: 1px;
+    position: relative;
+    vertical-align: top;
+    width: calc(100% - #{$grid-gutter});
+    @include transition(all .2s);
+    @if $flex-enabled {
+      @supports (display: flex) {
+        @include flex(0 0 auto);
+      }
+    }
+  }
+  &--flush {
+    @include margin(null 0);
+    width: 100%;
+    > [class^="col"] {
+      margin-left: -#{$grid-gutter};
+      margin-right: -#{$grid-gutter};
+    }
+  }
+}
+
+// Align-Self Utility Classes
+.as-flex-start  { align-self: flex-start; }
+.as-flex-end    { align-self: flex-end; }
+.as-baseline    { align-self: baseline; }
+.as-center      { align-self: center; }
+.as-stretch     { align-self: stretch; }
+
+// Generator
+@each $breakpoint, $min-width in $breakpoints {
+  @if $breakpoint == "xs" {
+    @media (max-width: #{$min-width}) {
+      .grid .col-#{$breakpoint}-flex {
+        @if $flex-enabled {
+          @supports (display: flex) {
+            @include flex(1 0 auto);
+          }
+        }
+      }
+      @for $i from 1 through length($prop) {
+        @each $numerator, $denominator in $column-sizes {
+          @for $n from 1 to (length($denominator)+1) {
+            .grid .col-#{$breakpoint} {
+              &#{nth($tag, $i)}-#{$numerator}-#{nth($denominator, $n)} {
+                $percentage: percentage($numerator/nth($denominator, $n));
+                #{nth($prop, $i)}: calc(#{$percentage} - #{$grid-gutter});
+              }
+            }
+          }
+        }
+      }
+    }
+  } @else {
+    @media (min-width: #{$min-width}) {
+      .grid .col-#{$breakpoint}-flex {
+        @if $flex-enabled {
+          @supports (display: flex) {
+            @include flex(1 0 auto);
+          }
+        }
+      }
+      @for $i from 1 through length($prop) {
+        @each $numerator, $denominator in $column-sizes {
+          @for $n from 1 to (length($denominator)+1) {
+            .grid .col-#{$breakpoint} {
+              &#{nth($tag, $i)}-#{$numerator}-#{nth($denominator, $n)} {
+                $percentage: percentage($numerator/nth($denominator, $n));
+                #{nth($prop, $i)}: calc(#{$percentage} - #{$grid-gutter});
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

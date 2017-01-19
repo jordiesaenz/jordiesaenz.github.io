@@ -1,0 +1,36 @@
+section.marquee {
+  position: relative;
+  .marquee-slide {
+    padding: unit(6) 0;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+  }
+  .marquee-link {
+    h3 {
+      color: $white;
+      @extend %transition;
+    }
+    img {
+      @include filter(brightness(100%));
+    }
+    &:hover, &:active, &:focus {
+      h3 { color: lighten($green, 12.5%); }
+    }
+  }
+  ul.slick-dots {
+    margin: auto;
+    text-align: center;
+    @include position(absolute, null null 7.5px 50%);
+    @include transform(translateX(-50%));
+  }
+  .slick-dotted.slick-slider {
+    margin-bottom: 0;
+  }
+  @media (max-width: $xs-max) {
+    .slick-prev, .slick-next {
+      display: none;
+    }
+  }
+}

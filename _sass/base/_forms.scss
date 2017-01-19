@@ -1,0 +1,191 @@
+form {
+  text-align: left;
+  margin-top: unit(1);
+}
+
+@mixin appearance-none {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  visibility: hidden;
+}
+.label-styles {
+  font-family: $serif;
+  font-size: 1.8rem;
+  cursor: pointer;
+  vertical-align: top;
+  color: $black;
+}
+.radio-checkbox-styles {
+  position: relative;
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  margin-right: 5px;
+  content: "";
+  border: 2px solid $black-80;
+}
+form {
+  text-align: left;
+}
+.form-control {
+  margin-bottom: 2rem;
+}
+label {
+  @extend .label-styles;
+}
+.radio-buttons-field {
+  > label:first-of-type {
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+.input-item {
+  margin-bottom: 2rem;
+}
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+  box-sizing: border-box;
+  font-family: $serif;
+  font-size: 1.6rem;
+  line-height: unit(3);
+  width: 100%;
+  height: unit(3);
+  padding: 0 unit(1);
+  color: $black;
+  border: 1px solid $black-80;
+  background-color: $white-80;
+  border-radius: 2px;
+  @include transition(all .2s);
+}
+input[type="text"]:hover,
+input[type="email"]:hover,
+input[type="tel"]:hover,
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+textarea:hover,
+textarea:focus,
+select:hover,
+select:focus {
+  border-color: $green;
+  outline: none;
+}
+
+// Placeholders
+*::-webkit-input-placeholder {
+  color: $black-80;
+}
+*:-moz-placeholder {
+  color: $black-80;
+}
+*::-moz-placeholder {
+  color: $black-80;
+}
+*:-ms-input-placeholder {
+  color: $black-80 !important;
+}
+
+// Text Area
+textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+// Select
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  &::-ms-expand {
+    display: none;
+  }
+}
+.country-field,
+.select-box-field {
+  position: relative;
+}
+.country-field:after,
+.select-box-field:after {
+  font-family: "FontAwesome";
+  font-size: 1.5rem;
+  line-height: 50px;
+  position: absolute;
+  top: 0;
+  right: 10px;
+  height: 50px;
+  content: "\f0d7";
+  pointer-events: none;
+  color: $black;
+}
+
+// Radio
+input[type=radio] {
+  @include appearance-none;
+}
+.radio-buttons-field .radio {
+  position: relative;
+  margin-bottom: 16px;
+  label {
+    @extend .label-styles;
+    &:before {
+      @extend .radio-checkbox-styles;
+      border-radius: 50%;
+    }
+  }
+  input[type=radio] + span {
+    &:after {
+      position: absolute;
+      top: 7px;
+      left: 4px;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      content: "";
+      background-color: $green;
+      @include transform(scale(0));
+      @include transition(all .2s cubic-bezier(1, 0, 0, 1.5));
+    }
+  }
+  input[type=radio]:checked + span {
+    &:after {
+      @include transform(scale(1));
+    }
+  }
+}
+
+// Checkbox
+input[type=checkbox] {
+  @include appearance-none;
+}
+.checkbox-field {
+  position: relative;
+}
+.checkbox-field input + label {
+  @extend .label-styles;
+  &:before {
+    border-radius: 2px;
+    @extend .radio-checkbox-styles;
+  }
+}
+input[type=checkbox] + span {
+  &:after {
+    font-family: "FontAwesome";
+    font-size: 18px;
+    position: absolute;
+    top: -3px;
+    left: 2px;
+    content: "\f00c";
+    color: $green;
+    @include transform(scale(0));
+    @include transition(all .2s cubic-bezier(1, 0, 0, 1.5));
+  }
+}
+input[type=checkbox]:checked + span {
+  &:after {
+    @include transform(scale(1));
+  }
+}

@@ -1,0 +1,7 @@
+section.videos {
+  @include padding(unit(2) null);
+  .video-date {
+    font-size: 1.2rem;
+    margin-top: unit(1);
+  }
+}

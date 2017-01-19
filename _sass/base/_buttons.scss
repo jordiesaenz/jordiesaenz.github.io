@@ -1,0 +1,46 @@
+@mixin btn-styles($color, $background-color) {
+  color: $color;
+  @include background-image(linear-gradient(to bottom left, lighten($background-color, 10%), $background-color));
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+  &:hover,
+  &:focus,
+  &:active {
+    box-shadow: -0px 2px 2px rgba(0, 0, 0, 0.1), -1px 3px 3px rgba(0, 0, 0, 0.2);
+    @include transform(translateY(-1px));
+    @include background-image(linear-gradient(to bottom left, lighten($background-color, 12.5%), lighten($background-color, 2.5%)));
+  }
+}
+%btn-block-styles {
+  display: block;
+  width: 100%;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+.btn {
+  border-radius: 2px;
+  display: inline-block;
+  font-size: 1.6rem;
+  font-weight: 700;
+  font-family: $sans-serif;
+  margin: 0;
+  padding: unit(1) unit(2);
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  @extend %transition;
+  &.btn-block {
+    @extend %btn-block-styles;
+  }
+  &.btn-optin {
+    @include btn-styles($white, $green);
+    display: block;
+    margin-top: unit(1);
+  }
+  &.btn-tweet {
+    font-size: 1.4rem;
+    @include btn-styles($white, $green);
+    @include padding(unit(0.5) unit(1));
+  }
+}

@@ -1,0 +1,65 @@
+$(document).ready( function() {
+  $("#slick").slick({
+    arrows: true,
+    autoplay: true,
+    autoplaySpeed: 6000,
+    dots: true,
+    infinite: true,
+    speed: 1000,
+    fade: true,
+    cssEase: 'linear'
+  });
+
+  $(window).scroll(function() {
+    var scroll = $(window).scrollTop();
+    if (scroll >= 40) {
+      $(".header-overlay").addClass("scrolled");
+    }
+    if (scroll < 40) {
+      $(".header-overlay").removeClass("scrolled");
+    }
+  });
+
+  var headerHeight = $(".header-overlay").height();
+  $(".sticky-footer-wrap").css("padding-top", headerHeight);
+
+  $(window).resize(function() {
+    var headerHeight = $(".header-overlay").height();
+    $(".sticky-footer-wrap").css("padding-top", headerHeight);
+  });
+
+  $("#mobile-nav-trigger").click(function() {
+    var navLinks = $(".mobile-nav-links");
+    $("header").toggleClass("mobile-nav-open");
+    navLinks.toggleClass("open");
+    if (navLinks.hasClass("open")) {
+      $(this).html("CLOSE <i class='fa fa-close'></i>");
+    } else {
+      $(this).html("MENU <i class='fa fa-caret-down'></i>");
+    }
+  });
+
+  $("section").click(function() {
+    $("header").removeClass("mobile-nav-open");
+    $(".mobile-nav-links").removeClass("open");
+    $("#mobile-nav-trigger").html("MENU <i class='fa fa-caret-down'></i>");
+  });
+
+  $('body').tweetHighlighted({
+                             // html node to use as the 'Tweet' button
+                             node: '<a href="#"><i class="fa fa-twitter"></i> Tweet</a>',
+                             // class attribute to attach to the node
+                             cssClass: 'btn btn-tweet',
+                             // minimum length of selected text needed to show the 'Tweet' button
+                             minLength: 6,
+                             // maximum length of selected text after which the 'Tweet' button is not shown
+                             maxLength: 144 * 2,
+                             // any extra string to attach to every tweet (mostly used to attach urls)
+                             // extra: ' - (https://www.jordiesaenz.com/)',
+                             // twitter 'via' handle (basically appends 'via @twitterhandle' to the tweet)
+                             via: 'jordiesaenz',
+                             // arguments to pass to the window.open() function
+                             popupArgs: 'width=600,height=600,toolbar=0,location=0'
+                          });
+
+});
