@@ -21,11 +21,11 @@ $(document).ready( function() {
   });
 
   var headerHeight = $(".header-overlay").height();
-  $(".sticky-footer-wrap").css("padding-top", headerHeight);
+  $(".sticky-footer-wrap").css("padding-top", headerHeight - 30);
 
   $(window).resize(function() {
     var headerHeight = $(".header-overlay").height();
-    $(".sticky-footer-wrap").css("padding-top", headerHeight);
+    $(".sticky-footer-wrap").css("padding-top", headerHeight - 30);
   });
 
   $("#mobile-nav-trigger").click(function() {

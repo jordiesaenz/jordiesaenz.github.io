@@ -29,6 +29,12 @@ p, a, ol, ul, li, pre {
   font-size: 1.6rem; font-weight: 300;
 }
 
+ul, ol {
+  font-family: $serif;
+  margin-top: unit(0.5);
+  margin-left: unit(2);
+  li { list-style: circle; }
+}
 
 p {
   font-family: $serif;
