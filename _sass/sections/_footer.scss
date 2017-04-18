@@ -1,10 +1,10 @@
 footer {
-  background-color: $black;
+  background-color: $white;
   @include padding(unit(2) 0);
   .social-links {
     margin-bottom: unit(1);
     h6 {
-      color: $white-80;
+      color: $black;
       margin-bottom: unit(0.5);
     }
     a:not(:last-of-type) {

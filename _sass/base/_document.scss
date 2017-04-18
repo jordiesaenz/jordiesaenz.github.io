@@ -5,7 +5,8 @@ html, body {
   font-family: Arapey;
 }
 body {
-  background-image: url('/images/background.jpg');
+  // background-image: url('/images/background.jpg');
+  background-color: $white;
   background-attachment: fixed;
   background-size: cover;
   background-position: center center;
