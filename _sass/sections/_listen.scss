@@ -1,6 +1,0 @@
-section.listen {
-  @include padding(unit(2) null);
-  @media (max-width: $sm-max) {
-    .listen-box { margin-top: unit(2); }
-  }
-}

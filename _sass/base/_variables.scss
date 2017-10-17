@@ -13,17 +13,20 @@ $container-gutter-sm: unit(2);
 $container-gutter-xs: unit(1);
 
 // Colors
-$black: #222;
+$black: #262d32;
 $black-80: rgba($black, .8);
 $black-50: rgba($black, .5);
 $white: #fff;
 $white-80: rgba(255, 255, 255, .8);
 $white-50: rgba(255, 255, 255, .5);
 
+$teal: #48B5C8;
+$pink: #F850AA;
+$orange: #F4554A;
 $green: #04f;
 $blue: #6cf;
 $light-gray: #f1f1f1;
 
 // Fonts
-$sans-serif: "Montserrat", "Helvetica", sans-serif;
+$sans-serif: "Arapey", "Georgia", "serif";
 $serif: "Arapey", "Georgia", "serif";
