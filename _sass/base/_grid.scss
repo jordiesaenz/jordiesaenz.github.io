@@ -5,7 +5,7 @@
 $flex-enabled: true;
 $align-items: stretch; // flex-start | flex-end | center | baseline | stretch
 $align-content: flex-start; // flex-start | flex-end | center | space-between | space-around | stretch
-$justify-content: center; // flex-start | flex-end | center | space-between | space-around
+$justify-content: flex-start; // flex-start | flex-end | center | space-between | space-around
 $flex-direction: row; // row (ltr) | row-reverse (rtl) | column (ttb) | column-reverse (btt)
 $flex-wrap: wrap; // nowrap (default; all items on one line) | wrap | wrap-reverse
 
