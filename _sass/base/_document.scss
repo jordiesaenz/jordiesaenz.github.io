@@ -5,12 +5,12 @@ html, body {
   font-family: Arapey;
 }
 body {
-  // background-image: url('/images/background.jpg');
-  background-color: $white;
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
+  background-image: url('/images/partyyoshi.gif');
+  // background-color: $white;
+  // background-attachment: fixed;
+  // background-size: contain;
+  // background-position: top left;
+  background-repeat: repeat;
 }
 
 section {

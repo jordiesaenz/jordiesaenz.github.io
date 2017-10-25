@@ -46,6 +46,8 @@ $prop: "width" "margin-left" "left" "right";
 
 // Styles
 .container {
+  height: 100%;
+  background-color: $white;
   max-width: $xl-min - ($container-gutter * 2);
   position: relative;
   @include margin(null auto);
